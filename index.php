@@ -6,7 +6,7 @@ require_once("controllers/HomeController.php");
 $home = new HomeController();
 
 
-$pages=['home','register','login','logout','show','AjouterPost','HomeMember','HomeAdmin','AfficherPost','supprimerpost','modifierpost','Memebers','detailpost','AfficherMember','Profile','AjouterCategory'];
+$pages=['home','register','login','logout','show','AjouterPost','HomeMember','HomeAdmin','AfficherPost','supprimerpost','modifierpost','Memebers','detailpost','AfficherMember','Profile','AjouterCategory','like'];
 
 if(isset($_SESSION['log']) && $_SESSION['log'] == true){
     //  require_once("./views/includes/navbar.php");

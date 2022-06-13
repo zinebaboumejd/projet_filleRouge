@@ -118,19 +118,19 @@ class Post
         }
     }
 
-    // static public function Afficherlike($intpost)
-    // {
+    static public function Afficherlike()
+    {
 
-    //     $stmt = DB::connect()->prepare('SELECT p.intpost,p.titrei_mg,l.idlike   FROM post p inner join like_ l WHERE  l.idpost=p.intpost');
-    //     $stmt->execute();
+        $stmt = DB::connect()->prepare('SELECT p.intpost,p.titrei_mg,l.idlike   FROM post p inner join like_ l WHERE  l.idpost=p.intpost');
+        $stmt->execute();
        
-    //      return $stmt->fetchAll();
-    //       var_dump(  $stmt->fetchAll());
+         return $stmt->fetchAll();
+          var_dump(  $stmt->fetchAll());
        
         
-    // }
+    }
 
-    static public function addlike($data)
+    static public function likepost($data)
     { 
                 $stmt = DB::connect()->prepare('SELECT * FROM like_ WHERE idmember = :member AND intpost = :intpost');
                 $stmt->execute(array(":idmember" => $data["idmember"], ":intpost" => $data["intpost"]));

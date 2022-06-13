@@ -45,9 +45,7 @@ class PostController
        if (!isset($_SESSION['log'])){
         $posts= Post::AfficherPost();
        }else{
-                   $posts = Post::All_AfficherPost_id($_SESSION['idmember']);
-           
-          
+                   $posts = Post::All_AfficherPost_id($_SESSION['idmember']);      
         }
         return $posts;
     }
@@ -117,11 +115,16 @@ class PostController
     //     }
     // }
     
+    public function Afficherlike(){
+       
+        $posts = Post::Afficherlike();
+        return $posts;
+      
+    }
 
 
 
-
-    public function addLike()
+    public function likepost()
     {
 
         if (isset($_POST["submit"])) {
@@ -129,7 +132,7 @@ class PostController
                 "idmember" => $_SESSION["idmember"],
                 "intpost" => $_POST["intpost"]
             );
-            $result = Post::addlike($data);
+            $result = Post::likepost($data);
             if ($result === "ok") {
                 Session::set("success", "product added to wishlist!");
                 Redirect::to("Profile");

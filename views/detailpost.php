@@ -5,13 +5,17 @@ if (isset($_POST['intpost'])) {
     $post = $data->un_Post();
 
     $_SESSION['intpost'] = $_POST['intpost'];
-
-   
+    $_SESSION['image'] = $post->image;
+    $_SESSION['titrei_mg'] = $post->titrei_mg;
+    $_SESSION['descreption'] = $post->descreption;;
+  
+  
+    
 
 
 if (isset($_POST["submit"])) {
     $data = new PostController();
-    $post = $data->addLike();
+    $like = $data->likepost();
 }
 
 }
@@ -38,21 +42,21 @@ if (isset($_POST["submit"])) {
                         </div>
                         <div class='flex w-full mt-1'>
                             <div class='text-blue-700 font-base text-xs mr-1 cursor-pointer'>
-                                <?php echo  $_SESSION['intpost'];  ?>
+                                <?php echo  $_SESSION['idmember'];  ?>
                             </div>
                             <!-- <div class='text-gray-400 font-thin text-xs'>
-                                <?php echo  $_SESSION['nom'];  ?>
+                                <?php echo  $_SESSION['prenom'];  ?>
                             </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="border-b border-gray-100"></div>
                 <div class='text-gray-400 font-medium text-sm mb-7 mt-6 mx-3 px-2'><img class="rounded"
-                        src="./public/image/<?= $post->image ?>"></div>
+                        src="./public/image/<?=  $_SESSION['image']?>"></div>
                 <div class='text-gray-600 font-semibold text-lg mb-2 mx-3 px-2'>
-                    <?php echo  $post->titrei_mg;  ?></div>
+                    <?php echo  $_SESSION['titrei_mg'] ; ?></div>
                 <div class='text-gray-500 font-thin text-sm mb-6 mx-3 px-2'>
-                    <?php echo  $post->descreption;  ?>
+                    <?php echo $_SESSION['descreption'] ;  ?>
                 </div>
                 <div class="flex justify-start mb-4 border-t border-gray-100">
                     <div class="flex space-x-4 mb-6 text-sm font-medium">
@@ -79,7 +83,6 @@ if (isset($_POST["submit"])) {
                                 // die();
                                 ?>
                             <?php elseif (isset($_SESSION['log'])) :  ?>
-
                             <?php if (($_SESSION['rool'] == false)) :  ?>
                             <form action="supprimerpost" method="post">
                                 <input type="hidden" name="intpost" value="<?php echo $_SESSION['intpost'] ?>">
@@ -101,47 +104,28 @@ if (isset($_POST["submit"])) {
 
                             <?php if (empty($_SESSION['log'])) : ?>
                             <form action="" method="POST">
-                                <input type="heddin" name="heddin" value="<?php echo $_SESSION['intpost'] ?>">
-                                <button type="submit"
+                                <input type="hidden" name="intpost" value="<?php echo $post->intpost ?>">
+                                <button type="submit" name="submit"
                                     class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border  border-slate-200 "
-                                    type="button" aria-label="Like" id="btn1" onclick="myFunction()">
-                                    <a href="<?php echo BASE_URL; ?>cart">
+                                     aria-label="Like" id="btn1" onclick="">
                                         <i class="fa-solid fa-heart "></i>
-                                    </a>
                                 </button>
                             </form>
                             <?php else : ?>
                             <!-- like -->
                             <?php // if(is post like):   ?>
-                                <form method="post">
-                                        <div class="form-group">
-                                            <input type="hidden" name="product_id" value="<?php echo $_SESSION['intpost'] ;?>
+                            <form method="post">
+
+                                <input type="hidden" name="product_id" value="<?php echo $_SESSION['intpost'] ;?>
                                             ">
-                                            <div class="d-grid gap-2 d-md-block">
-                                            <button type="submit" name="submit" class="btn btn-outline-danger btn-block ms-3">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </form>
-                            <!-- <form action="POST">
-                                <input type="heddin" value="<?php echo $_SESSION['intpost'] ;?>">
                                 <button type="submit"
                                     class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200"
-                                    type="button" aria-label="Like" id="btn1" onclick="myFunction()">
-                                    <a href="">
-                                        <i class="fa-solid fa-heart "></i>
-                                    </a>
-                                </button>
-                            </form> -->
-                            <?php // else():   ?>
-                            <!-- <button class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like" id="btn1" onclick="myFunction()"  style="color:red">
-                                            <a href="<?php echo BASE_URL; ?>cart">
-                                                <i class="fa-solid fa-heart "></i>
+                                    type="button" aria-label="Like" id="btn1" onclick="">
+                                    <i class="fa-solid fa-heart "></i>
 
-                                            </a>
-                                        </button> -->
+                                </button>
+                            </form>
+                           
                             <?php // endif 
                                         ?>
                             <?php endif ?>

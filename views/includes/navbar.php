@@ -178,6 +178,10 @@
                           class="block lg:inline-block text-md font-bold  text-slate-50  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
                           Profile
                       </a>
+                      <a href="<?php echo BASE_URL; ?>like"
+                          class="block lg:inline-block text-md font-bold  text-slate-50  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
+                          likes
+                      </a>
                       <button class="rounded-full bg-orange-500 p-2 mr-2 ml-aut">
                           <form class="d-flex">
                               <a href="<?php echo BASE_URL; ?>logout" title="Logout" class="text-slate-50 ">
