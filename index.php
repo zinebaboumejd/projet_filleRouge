@@ -48,27 +48,5 @@ else if (isset($_GET['page']) && $_GET['page'] === 'login'){
 }
 
 
-//  require_once("./views/includes/footer.php");
 
-
-// if(isset($_GET['page'])){
-//     if(in_array($_GET['page'],$pages)){
-//         $page=$_GET['page'];
-//          if($page==="dashboard" || $page==="acceptpost" || $page==='deletpost'){
-//             if(isset($_SESSION['admin']) && $_SESSION['admin']=== true){
-//                 $admin = new AdmineController();
-//                 $admin->index($page);
-                
-//             }else{
-//                 include('views/includes/404.php');
-//             }
-//         }else{
-//              $home->index($page);
-//         }
-//     }else{
-//         include('views/includes/404.php');
-//     }
-// }else{
-//     $home->index('home');
-// }
-// require_once("./views/includes/footer.php");
+ require_once("./views/includes/footer.php");

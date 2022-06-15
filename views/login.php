@@ -10,6 +10,7 @@
 </style>
 <div class="h-screen flex">
   <div class="flex w-1/2 bg-gradient-to-r from-black-500 to-blue-500  i justify-around items-center">
+    
     <div>
       <h1 class="text-black  font-bold text-4xl font-sans">Sewarbladek</h1>
       <img class="smplimage" src="../../FilleRouge/public/logoimage/smplimage.png" alt="">
@@ -17,7 +18,14 @@
     </div>
   </div>
   <div class="flex w-1/2 justify-center items-center bg-white">
+
+                   
+
     <form class="bg-white" method="POST">
+    <h1 class="text-gray-800 font-bold text-2xl mb-1">  <a href="<?php echo BASE_URL; ?>home"
+                          class="  text-orange-500  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
+                          HOME
+                      </a></h1>
       <h1 class="text-gray-800 font-bold text-2xl mb-1">login</h1>
       <p class="text-sm font-normal text-gray-600 mb-7">Content de te revoir</p>
       <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">

@@ -1,5 +1,8 @@
 <?php
 //  require_once("./views/includes/navbar.php");
+$Aff_like= new PostController();
+$likes =$Aff_like->Afficherlike();
+
 if (isset($_POST['intpost'])) {
     $data = new PostController();
     $post = $data->un_Post();
@@ -8,17 +11,16 @@ if (isset($_POST['intpost'])) {
     $_SESSION['image'] = $post->image;
     $_SESSION['titrei_mg'] = $post->titrei_mg;
     $_SESSION['descreption'] = $post->descreption;;
-  
-  
-    
-
+    $_SESSION['prix']=$post->prix;   
+}
 
 if (isset($_POST["submit"])) {
     $data = new PostController();
-    $like = $data->likepost();
+    $data->AjouterLike();
 }
 
-}
+// var_dump($like);
+// die;
 
 ?>
 
@@ -42,7 +44,7 @@ if (isset($_POST["submit"])) {
                         </div>
                         <div class='flex w-full mt-1'>
                             <div class='text-blue-700 font-base text-xs mr-1 cursor-pointer'>
-                                <?php echo  $_SESSION['idmember'];  ?>
+                                <?php echo  $_SESSION['intpost'];  ?>
                             </div>
                             <!-- <div class='text-gray-400 font-thin text-xs'>
                                 <?php echo  $_SESSION['prenom'];  ?>
@@ -55,9 +57,13 @@ if (isset($_POST["submit"])) {
                         src="./public/image/<?=  $_SESSION['image']?>"></div>
                 <div class='text-gray-600 font-semibold text-lg mb-2 mx-3 px-2'>
                     <?php echo  $_SESSION['titrei_mg'] ; ?></div>
+
                 <div class='text-gray-500 font-thin text-sm mb-6 mx-3 px-2'>
                     <?php echo $_SESSION['descreption'] ;  ?>
                 </div>
+                <div class="text-gray-500 font-thin text-sm mb-6 mx-3 px-2
+                 ">$<?php echo $_SESSION['prix'] ?></div>
+
                 <div class="flex justify-start mb-4 border-t border-gray-100">
                     <div class="flex space-x-4 mb-6 text-sm font-medium">
                         <div class="flex-auto flex space-x-4">
@@ -103,31 +109,40 @@ if (isset($_POST["submit"])) {
                             <!-- *****************like******************* -->
 
                             <?php if (empty($_SESSION['log'])) : ?>
-                            <form action="" method="POST">
+                            <!-- <form action="" method="POST">
                                 <input type="hidden" name="intpost" value="<?php echo $post->intpost ?>">
                                 <button type="submit" name="submit"
                                     class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border  border-slate-200 "
                                      aria-label="Like" id="btn1" onclick="">
                                         <i class="fa-solid fa-heart "></i>
                                 </button>
-                            </form>
+                            </form> -->
                             <?php else : ?>
                             <!-- like -->
-                            <?php // if(is post like):   ?>
-                            <form method="post">
-
-                                <input type="hidden" name="product_id" value="<?php echo $_SESSION['intpost'] ;?>
-                                            ">
-                                <button type="submit"
-                                    class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200"
-                                    type="button" aria-label="Like" id="btn1" onclick="">
+                           
+                            <?php 
+                           
+                            if (in_array($_SESSION['intpost'],$likes)):  ?>
+                                <form action="" method="POST">
+                                <input type="hidden" name="intpost" value="<?php echo  $_SESSION['intpost'] ?>">
+                                <button type="submit" name="submit"
+                                    class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border  border-slate-200 "
+                                     aria-label="Like" id="btn1" onclick="" style="color: red;">
+                                    <i class="fa-solid fa-heart "></i>
+                                </button>
+                            </form>        
+                            <?php else: ?>   
+                                <form action="" method="POST">
+                                <input type="hidden" name="intpost" value="<?php echo $_SESSION['intpost'] ?>">
+                                <button type="submit" name="submit"
+                                    class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border  border-slate-200 "
+                                     aria-label="Like" id="btn1" onclick="">
                                     <i class="fa-solid fa-heart "></i>
 
                                 </button>
-                            </form>
-                           
-                            <?php // endif 
-                                        ?>
+                            </form>                   
+                            <?php  endif  ?>
+                                       
                             <?php endif ?>
 
 

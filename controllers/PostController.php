@@ -16,7 +16,7 @@ class PostController
                     'image' => $new_name,
                     'idmember' => $_SESSION['idmember'],
                     'category' => $_POST['category'],
-                    
+                    'prix' => $_POST['prix'],
                     
                 );
                 // var_dump($data);
@@ -47,6 +47,7 @@ class PostController
        }else{
                    $posts = Post::All_AfficherPost_id($_SESSION['idmember']);      
         }
+      
         return $posts;
     }
         public function un_Post(){
@@ -97,7 +98,22 @@ class PostController
             }
         }
        }
-     
+       public function AjouterLike(){
+        if(isset($_POST['submit'])){
+            $data = array(   
+                'idmember' => $_SESSION['idmember'],
+                'intpost' => $_POST['intpost'],
+            );
+            // die(var_dump($data));
+            $result = Post::AjouterLike($data);
+            if($result === 'ok'){
+                    Session::set('success', 'like Added');
+                    Redirect::to('like');
+            }else{
+                Redirect::to('home');
+            }
+        }
+    }
     //    public function Ajouterlike(){
     //     if(isset($_POST['submit'])){
     //         $data = array(
@@ -117,30 +133,34 @@ class PostController
     
     public function Afficherlike(){
        
-        $posts = Post::Afficherlike();
-        return $posts;
+        $post = Post::Afficherlike();
+           return $post;
+           
+        // var_dump($posts);
+        // die;
       
     }
 
 
 
-    public function likepost()
-    {
+    // public function likepost()
+    // {
 
-        if (isset($_POST["submit"])) {
-            $data = array(
-                "idmember" => $_SESSION["idmember"],
-                "intpost" => $_POST["intpost"]
-            );
-            $result = Post::likepost($data);
-            if ($result === "ok") {
-                Session::set("success", "product added to wishlist!");
-                Redirect::to("Profile");
-            } else {
-                Session::set("error", "Product already in wishlist!");
-                Redirect::to("HomeMemeber");
-            }
-        }
-    }
+    //     if (isset($_POST["submit"])) {
+    //         $data = array(
+    //             "idmember" => $_SESSION["idmember"],
+    //             "intpost" => $_POST["intpost"]
+    //         );
+    //         $result = Post::likepost($data);
+           
+    //         if ($result === "ok") {
+    //             Session::set("success", "product added to wishlist!");
+    //             Redirect::to("Profile");
+    //         } else {
+    //             Session::set("error", "Product already in wishlist!");
+    //             Redirect::to("HomeMemeber");
+    //         }
+    //     }
+    // }
 
 }

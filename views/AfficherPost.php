@@ -2,6 +2,7 @@
 
  $Aff_Posts= new PostController();
  $AfficherPosts =$Aff_Posts->All_Post_id();
+
 // die(var_dump($AfficherPosts));
 include("./views/includes/navbar.php");
 ?>

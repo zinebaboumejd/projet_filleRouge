@@ -2,14 +2,16 @@
 
 class Post
 {
-    static public function AjouterPost($data){
-        $stmt = DB::connect()->prepare('INSERT INTO post (image,titrei_mg, descreption, idmember,category) 
-                                                VALUES (:image,:titrei_mg,:descreption,:idmember,:category)');
+    static public function AjouterPost($data)
+    {
+        $stmt = DB::connect()->prepare('INSERT INTO post (image,titrei_mg, descreption, idmember,category,prix) 
+                                                VALUES (:image,:titrei_mg,:descreption,:idmember,:category,:prix)');
         $stmt->bindParam(':image', $data['image']);
         $stmt->bindParam(':titrei_mg', $data['titrei_mg']);
         $stmt->bindParam(':descreption', $data['descreption']);
         $stmt->bindParam(':idmember', $data['idmember']);
         $stmt->bindParam(':category', $data['category']);
+        $stmt->bindParam(':prix', $data['prix']);
         if ($stmt->execute()) {
             return 'ok';
         } else {
@@ -21,11 +23,9 @@ class Post
 
         $stmt = DB::connect()->prepare('SELECT * FROM post ');
         $stmt->execute();
-       
-         return $stmt->fetchAll();
-          var_dump(  $stmt->fetchAll());
-       
-        
+
+        return $stmt->fetchAll();
+        var_dump($stmt->fetchAll());
     }
     static public function AfficherPost_id($idmember)
     {
@@ -33,7 +33,6 @@ class Post
         $stmt->bindParam(':idmember', $idmember);
         $stmt->execute();
         return $stmt->fetchAll();
-        
     }
     static public function All_AfficherPost_id($idmember)
     {
@@ -42,6 +41,7 @@ class Post
                 p.intpost,
                 p.titrei_mg,
                 p.descreption,
+                p.prix,
                 p.image,
                 p.category,
                 m.idmember,
@@ -92,25 +92,27 @@ class Post
     }
     static public function  modifierPost($data)
     {
-        $stmt = DB::connect()->prepare('UPDATE post SET  titrei_mg = :titrei_mg ,descreption = :descreption, image=:image,category=:category  WHERE intpost=:intpost');
-        $stmt->bindParam(':intpost',$data['intpost']);
+        $stmt = DB::connect()->prepare('UPDATE post SET  titrei_mg = :titrei_mg ,descreption = :descreption, image=:image,category=:category,prix=:prix  WHERE intpost=:intpost');
+        $stmt->bindParam(':intpost', $data['intpost']);
         $stmt->bindParam(':titrei_mg', $data['titrei_mg']);
         $stmt->bindParam(':descreption', $data['descreption']);
         $stmt->bindParam(':image', $data['image']);
         $stmt->bindParam(':category', $data['category']);
+        $stmt->bindParam(':prix', $data['prix']);
         if ($stmt->execute()) {
             return 'ok';
         } else {
             return 'error';
         }
     }
-   
-    static public function like($data){
+
+    static public function like($data)
+    {
         $stmt = DB::connect()->prepare('INSERT INTO like_ ( idmember,intpost) 
                                                 VALUES (:idmember,:intpost)');
-        $stmt->bindParam(':idmember',$_SESSION['idmember']);
+        $stmt->bindParam(':idmember', $_SESSION['idmember']);
         $stmt->bindParam(':intpost', $_POST['intpost']);
-       
+
         if ($stmt->execute()) {
             return 'ok';
         } else {
@@ -121,29 +123,44 @@ class Post
     static public function Afficherlike()
     {
 
-        $stmt = DB::connect()->prepare('SELECT p.intpost,p.titrei_mg,l.idlike   FROM post p inner join like_ l WHERE  l.idpost=p.intpost');
+        $stmt = DB::connect()->prepare('SELECT p.* ,l.idlike   FROM post p inner join like_ l WHERE  l.intpost=p.intpost and p.idmember=l.idmember'  );
         $stmt->execute();
-       
-         return $stmt->fetchAll();
-          var_dump(  $stmt->fetchAll());
-       
-        
+        return $stmt->fetchAll();
+        var_dump($stmt->fetchAll());
     }
 
-    static public function likepost($data)
-    { 
-                $stmt = DB::connect()->prepare('SELECT * FROM like_ WHERE idmember = :member AND intpost = :intpost');
-                $stmt->execute(array(":idmember" => $data["idmember"], ":intpost" => $data["intpost"]));
-                $result = $stmt->fetchAll();
-                if (count($result) > 0) {
-                    return "Product already in wishlist";
-                } else {
-                    $stmt = DB::connect()->prepare('INSERT INTO like_ (idpost, idmember) VALUES (:idmember, :intpost)');
-                    $stmt->execute(array(":idmember" => $data["idmember"], ":intpost" => $data["intpost"]));
-                    return "ok";
-                }
+    static public function AjouterLike($data)
+    {
+        $stmt = DB::connect()->prepare('INSERT INTO like_ (idmember,intpost)  VALUES (:idmember,:intpost)');
+
+        $stmt->bindParam(':idmember', $data['idmember']);
+        $stmt->bindParam(':intpost', $data['intpost']);
+    //    var_dump($data);
+       die;
+        if ($stmt->execute()) {
+            return 'ok';
             
-    
+        } else {
+            return 'error';
+        }
     }
-    // SELECT p.intpost,p.titrei_mg,l.idlike   FROM post p inner join like_ l WHERE  l.idpost=p.intpost
+
+    // static public function likepost($data)
+    // { 
+    //             $stmt = DB::connect()->prepare('SELECT * FROM like_ WHERE idmember = :idmember AND intpost = :intpost');
+    //             $stmt->execute(array(":idmember" => $data["idmember"], ":intpost" => $data["intpost"]));
+    //             $result = $stmt->fetchAll();
+    //             // var_dump($result);
+    //             // die;
+    //             if (count($result) > 0) {
+    //                 return "Product already in wishlist";
+
+    //             } else {
+    //                 $stmt = DB::connect()->prepare('INSERT INTO like_ (idpost, idmember) VALUES (:idmember, :intpost)');
+    //                 $stmt->execute(array(":idmember" => $data["idmember"], ":intpost" => $data["intpost"]));
+    //                 return "ok";
+    //             }
+
+
+    // }
 }

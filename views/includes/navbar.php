@@ -1,6 +1,6 @@
           <?php if (empty($_SESSION['log']) ) : ?>
           <nav
-              class="flex items-center justify-between flex-wrap w-[100%]  bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100 fixed w-full ">
+              class="flex items-center justify-between flex-wrap w-[100%]  bg-gradient-to-r from-gray-100 via-[#06283D] to-gray-100 fixed w-full ">
               <div class="flex items-center flex-no-shrink text-white mr-6 ">
                   <img src="https://nemtroutes.com/img/logo/logo.png" alt="" class="h-12 xl:h-20  mr-2  ">
               </div>
@@ -73,7 +73,8 @@
                           </a>
                       </li>
                       <li>
-                          <a href="AjouterCategory" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
+                          <a href="AjouterCategory"
+                              class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
                               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
                                   fill="currentColor">
                                   <path class="fill-current text-gray-300 group-hover:text-cyan-300" fill-rule="evenodd"
@@ -144,7 +145,7 @@
           <!-- User -->
           <?php elseif (!empty($_SESSION['log']) && $_SESSION['rool']==false) : ?>
           <nav
-              class="flex items-center justify-between flex-wrap w-[100%]  bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100 fixed w-full ">
+              class=" flex items-center justify-between flex-wrap  bg-gradient-to-r from-blue-900 to-blue-500 fixed w-full ">
               <div class="flex items-center flex-no-shrink text-white mr-6 ">
                   <img src="https://nemtroutes.com/img/logo/logo.png" alt="" class="h-12 xl:h-20  mr-2  ">
 
@@ -189,11 +190,13 @@
                               </a>
                           </form>
                       </button>
+                  
+                  </div>
+              </div>
+          </nav>    
                       <?php endif; ?>
                       <?php
-            // echo '<pre>';
-            // print_r($_SESSION['rool']);
-            // die;
+            
             ?>
 
 
