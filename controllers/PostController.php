@@ -100,6 +100,10 @@ class PostController
        }
        public function AjouterLike(){
         if(isset($_POST['submit'])){
+            // echo '<pre>';
+            // print_r($_POST);
+            // print_r($_SESSION);      
+            // die;
             $data = array(   
                 'idmember' => $_SESSION['idmember'],
                 'intpost' => $_POST['intpost'],
@@ -114,23 +118,6 @@ class PostController
             }
         }
     }
-    //    public function Ajouterlike(){
-    //     if(isset($_POST['submit'])){
-    //         $data = array(
-    //             'idmember' => $_SESSION['idmember'],
-    //             'intpost' => $_POST['intpost'],   
-                         
-    //         );
-    //         $result = Post::like($data);
-    //         if($result === 'ok'){
-    //                 Session::set('success', '  Ajouter like');
-    //                 Redirect::to('HomeMember');
-    //         }else{
-    //            echo $result ;
-    //         }
-    //     }
-    // }
-    
     public function Afficherlike(){
        
         $post = Post::Afficherlike();
@@ -141,7 +128,21 @@ class PostController
       
     }
 
-
+    public function supprimerLike(){
+        if(isset($_POST['idlike'])){
+            $data['idlike'] = $_POST['idlike'];
+    //         echo '<pre>';
+    //    var_dump($data['idlike']);
+    //     die;
+            $result = post::supprimerLike($data);
+            if($result === 'ok'){
+                 Session::set('success', 'post Deleted');
+                 Redirect::to('detailpost');
+            }else{
+               echo $result ;
+            }
+        }
+       }
 
     // public function likepost()
     // {

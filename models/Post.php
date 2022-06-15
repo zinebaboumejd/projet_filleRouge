@@ -131,12 +131,11 @@ class Post
 
     static public function AjouterLike($data)
     {
+        // print_r($data);
+        // die;
         $stmt = DB::connect()->prepare('INSERT INTO like_ (idmember,intpost)  VALUES (:idmember,:intpost)');
-
         $stmt->bindParam(':idmember', $data['idmember']);
         $stmt->bindParam(':intpost', $data['intpost']);
-    //    var_dump($data);
-       die;
         if ($stmt->execute()) {
             return 'ok';
             
@@ -144,7 +143,25 @@ class Post
             return 'error';
         }
     }
-
+    static public function supprimerLike($data)
+    {
+    //     echo '<pre>';
+    //   var_dump($data);
+    //   die;
+        $id = $data['idlike'];
+        
+    
+        try {
+            $query = 'DELETE FROM like_ WHERE idlike=:idlike';
+            $stmt = DB::connect()->prepare($query);
+            $stmt->execute(array(":idlike" => $id));
+            if ($stmt->execute()) {
+                return 'ok';
+            }
+        } catch (PDOException $ex) {
+            echo 'error' . $ex->getMessage();
+        }
+    }
     // static public function likepost($data)
     // { 
     //             $stmt = DB::connect()->prepare('SELECT * FROM like_ WHERE idmember = :idmember AND intpost = :intpost');

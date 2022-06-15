@@ -5,7 +5,7 @@
                   <img src="https://nemtroutes.com/img/logo/logo.png" alt="" class="h-12 xl:h-20  mr-2  ">
               </div>
               <a href="<?php echo BASE_URL; ?>home"
-                  class="block lg:inline-block text-md font-bold  text-orange-500  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
+                  class="block lg:inline-block text-md font-bold  text-orange-800  sm:hover:border-indigo-400  hover:text-orange-800 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
                   HOME
               </a>
               <div class="block lg:hidden">
@@ -26,7 +26,7 @@
                           AfficherPost
                       </a>
                   </div>
-                  <button class="rounded-full bg-orange-500 p-2 mr-2 ml-aut">
+                  <button class="rounded-full bg-orange-800 p-2 mr-2 ml-aut">
                       <a href="<?php echo BASE_URL; ?>login" title="Logout" class="text-slate-50 ">
                           <i class="fas fa-user"></i> loginnnnnnnn
                       </a>

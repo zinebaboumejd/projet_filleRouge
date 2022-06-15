@@ -21,7 +21,7 @@ style=" background-image: url('../../../FilleRouge/public/logoimage/film-g72982c
                 <div class=" flex items-center h-full">
                     <div class="px-10 max-w-xl">
 
-                        <h1> Sewarbladek</h1>
+                        <h1 class="text-4xl text-slate-900 font-bold p-10"> Sewarbladek</h1>
                         Découvrez les belles villes du Maroc, des villes animées de Marrakech et Tanger, à la vue
                         imprenable du Djebel Toubkal, aux plages ensoleillées d'Essaouira. Que vous cherchiez à faire du
                         tourisme ou du shopping dans les marchés en plein air, il y a quelque chose que tout le monde
