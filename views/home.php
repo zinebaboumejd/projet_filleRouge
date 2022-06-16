@@ -1,11 +1,10 @@
 <?php require_once("./views/includes/navbar.php"); ?>
-<section class="w-full h-[800px] bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100 header" 
-style=" background-image: url('../../../FilleRouge/public/logoimage/film-g72982ce4f_1920.jpg'); background-size:cover;">
+<section class="w-full h-[800px] bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100 header"
+    style=" background-image: url('../../../FilleRouge/public/logoimage/film-g72982ce4f_1920.jpg'); background-size:cover;">
     <div class="container w-full h-full px-8 sm:px-0 mx-auto flex flex-col justify-center">
 
-        <h1 class="text-6xl text-gray-100 font-bold">Lorem ipsum dolor sit amet</h1>
-        <p class="text-gray-200 mt-4">Integer viverra eget augue et hendrerit. Mauris consectetur, mi et molestie
-            vestibulum, nisi tortor pellentesque libero, nec semper nibh mauris eu neque.</p>
+        <h1 class="text-6xl text-gray-100 font-bold">SewarBladek</h1>
+        <p class="text-gray-200 mt-4">--------------</p>
     </div>
 
 </section>
@@ -21,13 +20,15 @@ style=" background-image: url('../../../FilleRouge/public/logoimage/film-g72982c
                 <div class=" flex items-center h-full">
                     <div class="px-10 max-w-xl">
 
-                        <h1 class="text-4xl text-slate-900 font-bold p-10"> Sewarbladek</h1>
-                        Découvrez les belles villes du Maroc, des villes animées de Marrakech et Tanger, à la vue
-                        imprenable du Djebel Toubkal, aux plages ensoleillées d'Essaouira. Que vous cherchiez à faire du
-                        tourisme ou du shopping dans les marchés en plein air, il y a quelque chose que tout le monde
-                        aime dans ce pays !
-
-
+                        <h1 class="text-4xl text-slate-900 font-bold p-14 ml-12 flex items-center "> Sewarbladek</h1>
+                        <p class="text-xl pt-10">
+                            Découvrez les belles villes du Maroc, des villes animées de Marrakech et Tanger, à la vue
+                            imprenable du Djebel Toubkal, aux plages ensoleillées d'Essaouira. Que vous cherchiez à
+                            faire du
+                            tourisme ou du shopping dans les marchés en plein air, il y a quelque chose que tout le
+                            monde
+                            aime dans ce pays !
+                        </p>
                     </div>
                 </div>
             </div>
@@ -49,10 +50,11 @@ style=" background-image: url('../../../FilleRouge/public/logoimage/film-g72982c
 
 
 <!-- component category -->
-<div class="bg-blue w-full p-8  h-80 flex justify-center font-sans bg-gradient-to-r from-gray-100 via-[#bce1ff]">
+<div class=" w-full p-8  h-80 flex justify-center font-sans  bg-gradient-to-r from-blue-900 via-blue-500 to-orange-700  ">
     <div class="rounded bg-grey-light w-85 p-2">
         <h2 class="w-full text-3xl font-bold text-center sm:text-4xl md:text-5xl"> Le meilleur des meilleurs.</h2>
-        <p>Nos éditeurs sont toujours à la recherche de contenu à couper le souffle à découvrir et à rester inspiré.
+        <p class="">Nos éditeurs sont toujours à la recherche de contenu à couper le souffle à découvrir et à rester
+            inspiré.
             Revenez chaque semaine pour voir les nouveautés.
         </p>
 
@@ -80,7 +82,7 @@ style=" background-image: url('../../../FilleRouge/public/logoimage/film-g72982c
                     </div>
 
 
-                    <img class="smplimage" src="../../FilleRouge/public/logoimage/hd-wallpaper-g49d3f6427_1920.jpg"
+                    <img class="smplimage h-68  w-98  " src="../../FilleRouge/public/logoimage/hd-wallpaper-g49d3f6427_1920.jpg"
                         alt="">
 
                     <div class="p-4">
@@ -88,7 +90,8 @@ style=" background-image: url('../../../FilleRouge/public/logoimage/film-g72982c
                             Construisez votre carrière</h2>
                         <h1 class="title-font text-lg font-medium text-gray-900 mb-3">......................</h1>
                         <div class="flex items-center flex-wrap ">
-                            <p>Découvrez les belles villes du Maroc, des villes animées de Marrakech et Tanger, à la vue
+                            <p class="text-lg">Découvrez les belles villes du Maroc, des villes animées de Marrakech et
+                                Tanger, à la vue
                                 imprenable du
                                 Djebel Toubkal, aux plages ensoleillées d'Essaouira. Que vous cherchiez à faire du
                                 tourisme ou du
@@ -110,14 +113,15 @@ style=" background-image: url('../../../FilleRouge/public/logoimage/film-g72982c
                     </div>
 
 
-                    <img class="smplimage    " src="../../FilleRouge/public/logoimage/flower-g70602761b_1920.jpg" alt="">
+                    <img class="smplimage  h-80  w-98   " src="../../FilleRouge/public/logoimage/flower-g70602761b_1920.jpg"
+                        alt="">
 
                     <div class="p-4">
                         <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
                             Découvrez vos performances</h2>
                         <h1 class="title-font text-lg font-medium text-gray-900 mb-3">......................</h1>
                         <div class="flex items-center flex-wrap ">
-                            <p> Avec Statistics et Pulse, vous obtenez des informations précieuses sur les performances
+                            <p class="text-lg"> Avec Statistics et Pulse, vous obtenez des informations précieuses sur les performances
                                 de vos photos et sur votre classement par rapport aux autres photographes de la
                                 communauté..</p>
 
@@ -135,15 +139,10 @@ style=" background-image: url('../../../FilleRouge/public/logoimage/film-g72982c
                     <div class="w-full">
 
 
-                        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                            <div class="w-full">
-                                <!-- <div class="w-full flex p-2">
-            <h2 class="font-bold" >Construisez votre carrière</h2>
-              </div> -->
-                            </div>
+                    
 
 
-                            <img class="smplimage"
+                            <img class="smplimage h-80  w-98 "
                                 src="../../FilleRouge/public/logoimage/casablanca-g519acc9a3_1920.jpg" alt="">
 
                             <div class="p-4">
@@ -152,7 +151,7 @@ style=" background-image: url('../../../FilleRouge/public/logoimage/film-g72982c
                                 <h1 class="title-font text-lg font-medium text-gray-900 mb-3">......................
                                 </h1>
                                 <div class="flex items-center flex-wrap ">
-                                    <p>Soyez payé pour vos photos
+                                    <p class="text-lg">Soyez payé pour vos photos
                                         Ne laissez pas vos photos prendre la poussière, comme sur d'autres plateformes.
                                         Gagnez en visibilité et soyez payé pour votre travail avec les partenaires de
                                         sewrbladk.
@@ -178,7 +177,7 @@ style=" background-image: url('../../../FilleRouge/public/logoimage/film-g72982c
 
 
 <!-- component -->
-<div class="bg-blue w-full p-8  h-80 flex justify-center font-sans bg-gradient-to-r from-gray-100 via-[#bce1ff]">
+<div class="bg-blue w-full p-8  h-80 flex justify-center font-sans  bg-gradient-to-r from-blue-900 via-blue-500 to-orange-700">
     <div class="rounded bg-grey-light w-85 p-2">
         <h2 class="w-full text-3xl font-bold text-center sm:text-4xl md:text-5xl"> Le meilleur des meilleurs.</h2>
         <p>Nos éditeurs sont toujours à la recherche de contenu à couper le souffle à découvrir et à rester inspiré.
@@ -240,11 +239,3 @@ style=" background-image: url('../../../FilleRouge/public/logoimage/film-g72982c
 
     </div>
 </main>
-
-
-
-
-
-
-
-

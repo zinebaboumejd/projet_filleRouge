@@ -9,12 +9,15 @@
 body{
   font-family:'Roboto', 'Open Sans';
   background-repeat: no-repeat;
+  
+}
+p{
+ 
 }
 header{
   background-image: url('../logoimage/desert-g45ccb8828_1920.jpg');
 }
-.header{
-  /* background-image: url('../../../FilleRouge/public/logoimage/flower-g70602761b_1920.jpg'); */
-  /* background-size: cover; */
+a{
+  text-decoration: none;
 }
 

@@ -13,5 +13,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Sewarbeladk</title>
 </head>
-<body  oncontextmenu="return false">
+<body  >
 
+<!-- oncontextmenu="return false" -->

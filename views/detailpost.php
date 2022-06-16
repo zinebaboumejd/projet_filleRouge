@@ -15,8 +15,13 @@ if (isset($_POST['intpost'])) {
 }
 
 if (isset($_POST["submit"])) {
-    $data = new PostController();
-    $data->AjouterLike();
+    if(in_array($_SESSION['intpost'],$likes[0])){
+    Redirect::to('like');
+    }else{
+        $data = new PostController();
+        $data->AjouterLike();
+    }
+   
 }
 
 // var_dump($like);
@@ -119,10 +124,13 @@ if (isset($_POST["submit"])) {
                             </form> -->
                             <?php else : ?>
                             <!-- like -->
-                           
-                            <?php 
-                           
-                            if (in_array($_SESSION['intpost'],$likes)):  ?>
+                           <?php  
+                           for($i=0;$i<sizeof($likes);$i++){
+                            $tbl_like[$i]=$likes[$i][0];                       
+                           }                   
+                           ?>                                             
+                           <?php   ?>
+                           <?php     if (in_array($_SESSION['intpost'],$tbl_like)):  ?>
                                 <form action="" method="POST">
                                 <input type="hidden" name="intpost" value="<?php echo  $_SESSION['intpost'] ?>">
                                 <button type="submit" name="submit"
@@ -142,7 +150,7 @@ if (isset($_POST["submit"])) {
                                 </button>
                             </form>                   
                             <?php  endif  ?>
-                                       
+                                    <?php //endfor   ?>   
                             <?php endif ?>
 
 

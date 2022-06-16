@@ -119,12 +119,13 @@ class PostController
         }
     }
     public function Afficherlike(){
+
        
-        $post = Post::Afficherlike();
-           return $post;
+        $like = Post::Afficherlike($_SESSION['idmember']);
+           return $like;
            
-        // var_dump($posts);
-        // die;
+        var_dump($like);
+        die;
       
     }
 

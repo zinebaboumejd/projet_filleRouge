@@ -120,13 +120,23 @@ class Post
         }
     }
 
-    static public function Afficherlike()
+    static public function Afficherlike($idmember)
     {
-
-        $stmt = DB::connect()->prepare('SELECT p.* ,l.idlike   FROM post p inner join like_ l WHERE  l.intpost=p.intpost and p.idmember=l.idmember'  );
+// echo $idmember;
+// die;
+        $stmt = DB::connect()->prepare('SELECT p.* ,l.idlike   FROM post p inner join like_ l WHERE  l.intpost=p.intpost and p.idmember=:idmember  ');
+        $stmt->bindParam(':idmember', $idmember);
         $stmt->execute();
         return $stmt->fetchAll();
-        var_dump($stmt->fetchAll());
+        
+        // try {
+        //     $stmt = DB::connect()->prepare('SELECT p.* ,l.idlike   FROM post p inner join like_ l WHERE  l.intpost=p.intpost and p.idmember=l.idmember'  );
+        //     $stmt->execute(array(":intpost" => $idmember));
+        //     $stmt->execute();
+        //       return $stmt->fetchAll();
+        // } catch (PDOException $ex) {
+        //     echo 'error' . $ex->getMessage();
+        // }
     }
 
     static public function AjouterLike($data)
