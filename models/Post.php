@@ -179,10 +179,9 @@ class Post
 
        
         }
-         public function Ajouterpanier($data)
+        static public function Ajouterpanier($data)
         {
-            // print_r($data);
-            // die;
+            
             $stmt = DB::connect()->prepare('INSERT INTO panier (idmember,intpost)  VALUES (:idmember,:intpost)');
             $stmt->bindParam(':idmember', $data['idmember']);
             $stmt->bindParam(':intpost', $data['intpost']);
@@ -215,8 +214,10 @@ class Post
             $query = 'DELETE FROM panier WHERE intpost=:intpost';
             $stmt = DB::connect()->prepare($query);
             $stmt->execute(array(":intpost" => $id));
+            
             if ($stmt->execute()) {
                 return 'ok';
+               
             }
         } catch (PDOException $ex) {
             echo 'error' . $ex->getMessage();
@@ -227,5 +228,34 @@ class Post
         $stmt->execute();
         return $stmt->fetchAll();
     }
-     
+    static public function valider($data)
+    {
+        // print_r($data); //Array ( [0] => 92 [1] => 91 )
+        // die;
+        $stmt = DB::connect()->prepare('INSERT INTO commende (idmember,intpost,datecom)  VALUES (:idmember,:intpost,NOW())');
+        
+    //  echo $_SESSION['idmember'];
+    //  die;
+        for($i=0;$i<sizeof($data);$i++){
+            $stmt->bindParam(':idmember', $_SESSION['idmember']);
+          $stmt->bindParam(':intpost', $data[$i]);
+          $stmt->execute();
+                  //   $exec='execute';     
+            $stm = DB::connect()->prepare('DELETE FROM panier   WHERE intpost=:intpost');
+            $stm->bindParam(':intpost',$data[$i] );         
+        $stm->execute();
+        // echo '<pre>';
+        // echo'aaaaa';
+        // die();
+        }
+        // var_dump($stmt);
+        // die;
+        // if ($exec=='execute') {
+        //             return 'ok';
+                    
+        //         } else {
+        //             return 'error';
+        //         } 
+    }
+    
 }

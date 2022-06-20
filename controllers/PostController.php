@@ -101,11 +101,7 @@ class PostController
         }
        }
        public function AjouterLike(){
-        // if(isset($_POST['submit'])){
-            // echo '<pre>';
-            // print_r($_POST);
-            // print_r($_SESSION);      
-            // die;
+      
             $data = array(   
                 'idmember' => $_SESSION['idmember'],
                 'intpost' => $_POST['intpost'],
@@ -118,7 +114,7 @@ class PostController
             }else{
                 Redirect::to('home');
             }
-        // }
+       
     }
     public function Afficherlike(){
 //    $intpost=$_POST['intpost'];
@@ -184,7 +180,7 @@ class PostController
             //    $intpost=$_POST['intpost'];
                    $idmember= $_SESSION['idmember'];
                     $like = Post::Afficherpanier($idmember);
-                       return $like;
+                    return $like;
                        
                     // var_dump($like);
                     // die;
@@ -210,9 +206,28 @@ class PostController
                        return $total;
                        
                    }
-                
+                   public function valider($data){
+                    // $data = array(   
+                    //     'idmember' => $_SESSION['idmember'],
+                    //     'intpost' => $_POST['intpost'],
+                    // );
 
- }
+                    // echo '<pre>';
+                    // die(var_dump($data));
 
+                    if(isset($_POST['valider'])){
+                        // echo'aaaaa';
+                        // die();
+                    $result = Post::valider($data);
+                  
+                    if($result === 'ok'){
+                            Session::set('success', 'commend');
+                            Redirect::to('panier');
+                    }else{
+                        Redirect::to('home');
+                    }
+                }
+            } 
 
-    
+ 
+} 

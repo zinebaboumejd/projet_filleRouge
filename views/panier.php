@@ -1,40 +1,47 @@
 <?php 
-require_once("./views/includes/navbar.php");
-// echo $_POST['intpost'];
-// echo $_SESSION['idmember'];
-// die;
+// require_once("./views/includes/navbar.php");
 
 if (isset($_POST['submit'])) {
-//     echo $_POST['intpost'];
-// echo $_SESSION['idmember'];
-// die;
 $Ajouterpanier=new PostController();
 $Ajouterpanier->Ajouterpanier();
-// echo '<pre>';
-// print_r($Ajouterpanier);
-// die();
+
 }
 
 
 
 $Afficher_panier = new PostController();
 $Afficherpaniers = $Afficher_panier->Afficherpanier();
-
+// echo '<pre>';
+// echo sizeof($Afficherpaniers);
+// die(var_dump($Afficherpaniers));
 
 $totalprix=new PostController();
 $total=$totalprix->totalprix();
 
 // echo $total[0][0];
+for($i=0;$i<sizeof($Afficherpaniers);$i++){
+ $data[]=$Afficherpaniers[$i]['intpost'];
+ 
+}
+// echo '<pre>';
+// die(var_dump($data));
 
-
+if (isset($_POST['valider'])) {
+  
+       $validercom=new PostController();
+    $validercom->valider($data);
+    //  echo "test".$i;
+    }
+    
+    
 
 ?>
 
 
 
-   
+<div class="grid grid-cols-1 md:lg:xl:grid-cols-3 group bg-white shadow-xl shadow-neutral-100 border ">
  
-      <div class=" bg-white px-10 py-10 inset-x-80 ml-[500px] w-[800px] ">
+      <div class=" bg-white px-10 py-10 inset-x-80  w-[800px] ">
         <div class="flex justify-center border-b pb-8 mt-10">
           <h1 class="font-semibold text-2xl">Panier</h1>
         
@@ -73,14 +80,17 @@ $total=$totalprix->totalprix();
         <?php endforeach  ?> 
 
        
-
+ <form action="" method="post">
         <div class="w-full   bg-indigo-200 shadow-xl shadow-indigo-200 py-10 px-20 flex justify-between items-center mt-10 drop-shadow-md">
             <p class=" text-gray-900"> <span class="text-4xl font-medium">Toutal</span> <br> <span class="text-lg  flex justify-center"><?php echo $total[0][0];  ?></span></p>
-            <button class="px-3 py-2  font-medium text-slate-700 shadow-xl  hover:bg-white duration-150  bg-yellow-400 ">Valide</button>
+            
+            <input type="hidden" name="intpost" value="<?php // echo  $Afficherpanier['intpost'] ?>">
+            <button type="submit" name="valider" class="px-3 py-2  font-medium text-slate-700 shadow-xl  hover:bg-white duration-150  bg-yellow-400 ">Valide</button>
         </div>
-
+</form>
     </div>
   
+</div>
 
 
 <!-- <div id="menu" class="container mx-auto px-4 lg:pt-24 lg:pb-64">
