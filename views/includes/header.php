@@ -11,6 +11,7 @@
         <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.4/dist/full.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
     <script src="../../../FilleRouge/public/js/main.js"></script>
+    <script src="../../../FilleRouge/public/js/particles.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Sewarbeladk</title>
 </head>

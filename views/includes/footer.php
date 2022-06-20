@@ -1,62 +1,24 @@
-<!-- component footer-->
-<footer class=" bg-indigo-200 ">
-    <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            <div>
-            <a href="<?php echo BASE_URL; ?>home">
-              <img src="../../../FilleRouge/public/logoimage//logosb.png" class="h-12 flex items-center"  alt="">
-</a>
-              
-            </div>
-            <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
-                <div>
-                    <p class="font-medium">
-                  Menu
-                    </p>
-                    <nav class="flex flex-col mt-4 space-y-2 text-sm text-white">
-                        <a class="hover:text-orange-700" href> About </a>
-                        <a class="hover:text-orange-700" href> Meet the Team </a>
-                        <a class="hover:text-orange-700" href> History </a>
-                        <a class="hover:text-orange-700" href> Careers </a>
-                    </nav>
-                </div>
-                <!-- <div>
-                    <p class="font-medium">
-                        Services
-                    </p>
-                    <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                        <a class="hover:opacity-75" href> 1on1 Coaching </a>
-                        <a class="hover:opacity-75" href> Company Review </a>
-                        <a class="hover:opacity-75" href> Accounts Review </a>
-                        <a class="hover:opacity-75" href> HR Consulting </a>
-                        <a class="hover:opacity-75" href> SEO Optimisation </a>
-                    </nav>
-                </div> -->
-                <!-- <div>
-                    <p class="font-medium">
-                        Helpful Links
-                    </p>
-                    <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                        <a class="hover:opacity-75" href> Contact </a>
-                        <a class="hover:opacity-75" href> FAQs </a>
-                        <a class="hover:opacity-75" href> Live Chat </a>
-                    </nav>
-                </div> -->
-                <!-- <div>
-                    <p class="font-medium">
-                        Legal
-                    </p>
-                    <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                        <a class="hover:opacity-75" href> Privacy Policy </a>
-                        <a class="hover:opacity-75" href> Terms &amp; Conditions </a>
-                        <a class="hover:opacity-75" href> Returns Policy </a>
-                        <a class="hover:opacity-75" href> Accessibility </a>
-                    </nav>
-                </div> -->
-            </div>
-        </div>
-        <p class="mt-8 text-xs text-gray-800 ">
-            © 2022 zineb aboumejd | youcode safi 
-        </p>
+<footer class="footer footer-center p-10 text-base-content font-proza rounded bg-blue-50">
+<!-- <div class="grid grid-flow-col gap-4 text-[#000] " style=" background-image: url('../../../FilleRouge/public/logoimage/backdrop-5729092_1920.jpg');"  > -->
+<div class="grid grid-flow-col gap-4 text-[#000] ">
+    <img src="../../../FilleRouge/public/logoimage/Groupe 27.png" alt="">
+</div> 
+   
+  </div> 
+  <div class="grid grid-flow-col gap-4 text-[#000] ">
+    <a href="<?php echo BASE_URL ?>home" class="link link-hover text-[#000] ">Accueil</a> 
+    <a href="<?php echo BASE_URL ?>AfficherPost" class="link link-hover ">Post</a> 
+    <a href="<?php echo BASE_URL ?>Profile" class="link link-hover ">Profil</a> 
+    <!-- <a href="<?php echo BASE_URL ?>contact" class="link link-hover ">Contact Us</a> -->
+  </div> 
+  <div>
+    <div class="grid grid-flow-col gap-4 text-[#000] ">
+      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a> 
+      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a> 
+      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
     </div>
+  </div> 
+  <div>
+    <p class="text-[#000] ">Copyright © 2022 - zineb aboumejd | Youcode safi</p>
+  </div>
 </footer>

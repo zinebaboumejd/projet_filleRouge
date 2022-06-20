@@ -1,26 +1,18 @@
 <?php require_once("./views/includes/navbar.php"); ?>
-<!-- <section class="w-full h-[800px] bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100 header"
-    style=" background-image: url('../../../FilleRouge/public/logoimage/film-g72982ce4f_1920.jpg'); background-size:cover;">
-    <div class="container w-full h-full px-8 sm:px-0 mx-auto flex flex-col justify-center">
 
-        <h1 class="text-6xl text-gray-100 font-bold">SewarBladek</h1>
-        <p class="text-gray-200 mt-4">--------------</p>
-    </div>
 
-</section> -->
-
-<div class="py-16 bg-white">
-    <div  class="container m-auto px-6 space-y-8 text-gray-500 md:px-12 lg:px-20">
+<div class="py-16 bg-white "   style=" background-image: url('../../../FilleRouge/public/logoimage/backdrop-5729092_1920.jpg');" id="particles-js">
+    <div class="container m-auto px-6 space-y-8 text-gray-500 md:px-12 lg:px-20">
         <div class="justify-center text-center gap-6 md:text-left md:flex lg:items-center  lg:gap-16">
             <div class="order-last mb-6 space-y-6 md:mb-0 md:w-6/12 lg:w-6/12 ">
                 <p class="text-xl  text-gray-700 font-bold md:text-3xl">
-                    
-                
-                Soyez payé pour vos<span class="text-blue-500"> photos</span><br>
-Ne laissez pas vos photos prendre la poussière comme sur d'autres plateformes.
-Gagnez en visibilité et gagnez de l'argent pour votre entreprise avec les partenaires de <span class="text-blue-500">SewarBladk</span>.
+
+
+                    Soyez payé pour vos<span class="text-blue-500"> photos</span><br>
+                    Ne laissez pas vos photos prendre la poussière comme sur d'autres plateformes.
+                    Gagnez en visibilité et gagnez de l'argent pour votre entreprise avec les partenaires de <span class="text-blue-500">SewarBladk</span>.
                 </p>
-                
+
                 <!-- Buy now and benefit up to 30% off</h1>
                 <p class="text-lg">Be part of millions people around the world using tailus in modern User Interfaces.</p> -->
                 <!-- <div class="flex flex-row-reverse flex-wrap justify-center gap-4 md:gap-6 md:justify-end">
@@ -36,7 +28,10 @@ Gagnez en visibilité et gagnez de l'argent pour votre entreprise avec les parte
                     </button>
                 </div> -->
             </div>
-            <div class="grid grid-cols-5 grid-rows-4 gap-4 md:w-5/12 lg:w-6/12">
+            
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_vcvl4urd.json" background="transparent" speed="1" style="width: 500px; height: 500px;" loop autoplay></lottie-player>
+            <!-- <div class="grid grid-cols-5 grid-rows-4 gap-4 md:w-5/12 lg:w-6/12">
                 <div class="col-span-2 row-span-4">
                     <img src="../../FilleRouge/public/logoimage/morocco-g975fb755e_1920.jpg" class="rounded-full" width="740" height="160" alt="shoes" loading="lazy">
                 </div>
@@ -46,7 +41,7 @@ Gagnez en visibilité et gagnez de l'argent pour votre entreprise avec les parte
                 <div class="col-span-3 row-span-3">
                     <img src="../../FilleRouge/public/logoimage/rabat-g8b879f892_1920.jpg" class="w-full h-full object-cover object-top rounded-xl" width="640" height="427" alt="shoes" loading="lazy">
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
@@ -72,8 +67,7 @@ Gagnez en visibilité et gagnez de l'argent pour votre entreprise avec les parte
                     </div>
                 </div>
             </div>
-            <div class="w-full h-100 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:w-1/2"
-                style="background-image: url('')">
+            <div class="w-full h-100 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:w-1/2" style="background-image: url('')">
                 <div class="  flex items-center h-full">
                     <div class="px-10 max-w-xl">
                         <img src="../../FilleRouge/public/logoimage/smplimage.png" alt="">
@@ -88,23 +82,35 @@ Gagnez en visibilité et gagnez de l'argent pour votre entreprise avec les parte
 
 
 
+<section class="bg-blue-100 dark:bg-gray-900">
+        <div class="container flex flex-col items-center px-4 py-12 mx-auto xl:flex-row">
+            <div class="flex justify-center xl:w-1/2">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets4.lottiefiles.com/packages/lf20_2oranrew.json"  background="transparent"  speed="1"  style="width: 400px; height: 400px;"  loop  autoplay></lottie-player>            </div>
+            
+            <div class="flex flex-col items-center mt-6 xl:items-start xl:w-1/2 xl:mt-0">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-800 xl:text-4xl dark:text-white">
+                Le meilleur des meilleurs.
+                </h2>
 
-<!-- component category -->
-<div class=" w-full p-8  h-80 flex justify-center font-sans  bg-gradient-to-r from-blue-900 via-blue-500 bg-indigo-200   shadow-xl">
-    <div class="rounded bg-grey-light w-85 p-2">
-        <h2 class="w-full text-3xl font-bold text-center sm:text-4xl md:text-5xl"> Le meilleur des meilleurs.</h2>
-        <p class="">Nos éditeurs sont toujours à la recherche de contenu à couper le souffle à découvrir et à rester
+                <p class="block max-w-2xl mt-4 text-xl text-gray-500 dark:text-gray-300">Nos éditeurs sont toujours à la recherche de contenu à couper le souffle à découvrir et à rester
             inspiré.
-            Revenez chaque semaine pour voir les nouveautés.
-        </p>
+            Revenez chaque semaine pour voir les nouveautés.</p>
+                <div class="mt-6 sm:-mx-2">
+                  
 
-        <button class="rounded-full bg-orange-500 p-2  flex flex-col-reverse  ">
-            Voir le choix des éditeurs
-        </button>
+                    <div class="inline-flex w-full mt-4 overflow-hidden rounded-lg shadow sm:w-auto sm:mx-2 sm:mt-0">
+                        <a href="<?php echo BASE_URL ?>AfficherPost" class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white transition-colors duration-150 transform sm:w-auto bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-600 hover:to-blue-600">
+                        <i class="fa-solid fa-angles-right"></i>                            <span class="mx-2">
+                        Aller Découvrir
+                            </span> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-    </div>
-</div>
 
 <section class="text-gray-600 body-font">
     <div class="container px-5 py-5 mx-auto">
@@ -122,8 +128,7 @@ Gagnez en visibilité et gagnez de l'argent pour votre entreprise avec les parte
                     </div>
 
 
-                    <img class="smplimage h-68  w-98  " src="../../FilleRouge/public/logoimage/hd-wallpaper-g49d3f6427_1920.jpg"
-                        alt="">
+                    <img class="smplimage h-68  w-98  " src="../../FilleRouge/public/logoimage/hd-wallpaper-g49d3f6427_1920.jpg" alt="">
 
                     <div class="p-4">
                         <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
@@ -153,8 +158,7 @@ Gagnez en visibilité et gagnez de l'argent pour votre entreprise avec les parte
                     </div>
 
 
-                    <img class="smplimage  h-80  w-98   " src="../../FilleRouge/public/logoimage/flower-g70602761b_1920.jpg"
-                        alt="">
+                    <img class="smplimage  h-80  w-98   " src="../../FilleRouge/public/logoimage/flower-g70602761b_1920.jpg" alt="">
 
                     <div class="p-4">
                         <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
@@ -179,34 +183,33 @@ Gagnez en visibilité et gagnez de l'argent pour votre entreprise avec les parte
                     <div class="w-full">
 
 
-                    
 
 
-                            <img class="smplimage h-80  w-98 "
-                                src="../../FilleRouge/public/logoimage/casablanca-g519acc9a3_1920.jpg" alt="">
 
-                            <div class="p-4">
-                                <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
-                                    Vendez votre travail</h2>
-                                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">......................
-                                </h1>
-                                <div class="flex items-center flex-wrap ">
-                                    <p class="text-lg">Soyez payé pour vos photos
-                                        Ne laissez pas vos photos prendre la poussière, comme sur d'autres plateformes.
-                                        Gagnez en visibilité et soyez payé pour votre travail avec les partenaires de
-                                        sewrbladk.
-                                </div>
+                        <img class="smplimage h-80  w-98 " src="../../FilleRouge/public/logoimage/casablanca-g519acc9a3_1920.jpg" alt="">
 
-
+                        <div class="p-4">
+                            <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
+                                Vendez votre travail</h2>
+                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">......................
+                            </h1>
+                            <div class="flex items-center flex-wrap ">
+                                <p class="text-lg">Soyez payé pour vos photos
+                                    Ne laissez pas vos photos prendre la poussière, comme sur d'autres plateformes.
+                                    Gagnez en visibilité et soyez payé pour votre travail avec les partenaires de
+                                    sewrbladk.
                             </div>
+
+
                         </div>
-
-
                     </div>
+
+
                 </div>
             </div>
-            <!--End here-->
         </div>
+        <!--End here-->
+    </div>
     </div>
 </section>
 
@@ -217,41 +220,41 @@ Gagnez en visibilité et gagnez de l'argent pour votre entreprise avec les parte
 
 
 <!--  -->
+<section class="bg-blue-100 dark:bg-gray-900">
+        <div class="container flex flex-col items-center px-4 py-12 mx-auto xl:flex-row">
+           
+            
+            <div class="flex flex-col items-center mt-6 xl:items-start xl:w-1/2 xl:mt-0">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-800 xl:text-4xl dark:text-white">
+                Le meilleur des meilleurs.
+                </h2>
 
+                <p class="block max-w-2xl mt-4 text-xl text-gray-500 dark:text-gray-300">Nos éditeurs sont toujours à la recherche de contenu à couper le souffle à découvrir et à rester
+            inspiré.
+            Revenez chaque semaine pour voir les nouveautés.</p>
+                <div class="mt-6 sm:-mx-2">
+                  
 
-  <div class="mx-auto  max-w-screen-lg bg-blue-700 px-5 py-10 w-[100%]">
-    <div class="grid gap-5 md:grid-cols-2 md:gap-10 lg:gap-20">
-      <div class="flex justify-center md:justify-end">
-        <img class="w-full max-w-sm" src="https://ouch-cdn2.icons8.com/sKnF2PmYhkmP28DzIm6KqWSknT03UVWjg3FLlGYIOp4/rs:fit:684:456/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvOTI3/L2U4OWQ2NmZiLTg0/NzEtNDc3NS1hNTA0/LTMwNWRiYmJkNzg0/MC5zdmc.png" alt="Marketing newsletter via computer Illustration in PNG, SVG" />
-      </div>
-      <div class="flex items-center">
-        <div class="mx-auto md:mx-0">
-          <h3 class="text-4xl font-bold text-white">Subscribe</h3>
-          <p class="mt-2 max-w-[20rem] text-lg text-white/80">Join our weekly digest. You'll also receive some of our best posts today.</p>
-          <form action="" class="mt-4 flex flex-col">
-            <input type="email" name="email" id="email" placeholder="Enter your email" class="w-full rounded border border-white/50 bg-transparent px-3 py-2 text-white placeholder:text-white/50 md:max-w-[18rem]" />
-            <button type="submit" class="mt-4 w-full max-w-[14rem] rounded bg-white/30 px-14 py-2 text-center text-white">Subscribe</button>
-          </form>
+                    <div class="inline-flex w-full mt-4 overflow-hidden rounded-lg shadow sm:w-auto sm:mx-2 sm:mt-0">
+                        <a href="<?php echo BASE_URL ?>AfficherPost" class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white transition-colors duration-150 transform sm:w-auto bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-600 hover:to-blue-600">
+                        <i class="fa-solid fa-angles-right"></i>                            <span class="mx-2">
+                        Découvrir galerie
+                            </span> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center xl:w-1/2">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+              <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_2oranrew.json"  background="transparent"  speed="1"  style="width: 400px; height: 400px;"  loop  autoplay></lottie-player>         
+               </div>
         </div>
-      </div>
-    </div>
-  </div>
-<!--<div class=" w-full p-8  h-80   font-sans  bg-gradient-to-r from-indigo-200 via-blue-500 bg-indigo-900">
-     <div class="rounded ">
-        <h2 class=" text-3xl font-bold text-center sm:text-4xl md:text-5xl"> Le meilleur des meilleurs.</h2>
-        <p>Nos éditeurs sont toujours à la recherche de contenu à couper le souffle à découvrir et à rester inspiré.
-            Revenez chaque semaine pour voir les nouveautés.
-        </p>
-
-        <button class="px-5 py-2 
-        bg-orange-500 rounded-full 
-                    font-medium text-white uppercase
-                    focus:outline-none hover:bg-orange-600 hover:shadow-none  ">
-            Voir le choix des éditeurs
-        </button>
+    </section>
 
 
-    </div> -->
+
+      
+  
 </div>
 
 
@@ -269,8 +272,7 @@ Gagnez en visibilité et gagnez de l'argent pour votre entreprise avec les parte
                 <div class=" flex items-center h-full">
                     <div class="  flex items-center h-full">
                         <div class="px-10 max-w-xl ">
-                            <img class=" rounded-lg " src="../../FilleRouge/public/logoimage/film-g72982ce4f_1920.jpg"
-                                alt="">
+                            <img class=" rounded-lg " src="../../FilleRouge/public/logoimage/film-g72982ce4f_1920.jpg" alt="">
 
                         </div>
                     </div>
@@ -278,19 +280,20 @@ Gagnez en visibilité et gagnez de l'argent pour votre entreprise avec les parte
                 </div>
             </div>
 
-            <div class="w-full h-100 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:w-1/2"
-                style="background-image: url('')">
+            <div class="w-full h-100 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:w-1/2" style="background-image: url('')">
                 <div class="px-10 max-w-xl mt-10">
 
                     Soyez payé pour vos photos
                     Ne laissez pas vos photos prendre la poussière, comme sur d'autres plateformes.
                     Gagnez en visibilité et soyez payé pour votre travail avec les partenaires de sewrbladk.
 
-                    <button class="w-50 py-3 mt-10 bg-orange-500 rounded-full
-                    font-medium text-white uppercase
-                    focus:outline-none hover:bg-orange-600 hover:shadow-none  ">
-                        Voir le choix des éditeurs
-                    </button>
+                    <div class="inline-flex w-full mt-4 overflow-hidden rounded-lg shadow sm:w-auto sm:mx-2 sm:mt-0">
+                        <a href="<?php echo BASE_URL ?>AfficherPost" class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white transition-colors duration-150 transform sm:w-auto bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-600 hover:to-blue-600">
+                        <i class="fa-solid fa-angles-right"></i>                            <span class="mx-2">
+                        Découvrir galerie
+                            </span> 
+                        </a>
+                    </div>
 
                 </div>
             </div>

@@ -25,9 +25,10 @@ class PostController
                 $result = Post::AjouterPost($data); 
                 if($result === 'ok'){
                     // echo 'Yoo';
-                    Session::set('success', ' Added post');
+                    // Session::set('success', ' Added post');
                     Redirect::to('Profile');
-                   // header('Location: http://localhost/FilleRouge/AfficherPost');
+                    header("Location: " . BASE_URL."AfficherPost");
+             
             }else{
                echo $result ;
             }
@@ -53,13 +54,7 @@ class PostController
 
             $post = Post::un_Post($_POST['intpost']);
             return $post;
-            // if(isset($_POST['intpost'])){
-            //     $data = array(
-            //         'intpost' => $_POST['intpost']
-            //     );
-            //     $post = Post::un_Post($data);
-            //     return $post;
-            // }
+          
         }
         
        public function supprimerPost(){
@@ -68,7 +63,8 @@ class PostController
             $result = post::supprimerPost($data);
             if($result === 'ok'){
                  Session::set('success', 'post Deleted');
-                 Redirect::to('Profil');
+                 header("Location: " . BASE_URL."Profil");
+               
             }else{
                echo $result ;
             }
@@ -94,7 +90,8 @@ class PostController
             $result = Post::modifierPost($data);
             if($result === 'ok'){
                 Session::set('success', 'post Updated');
-                    Redirect::to('AfficherPost');
+                header("Location: " . BASE_URL."AfficherPost");
+                  
             }else{
                echo $result ;
             }
@@ -110,33 +107,27 @@ class PostController
             $result = Post::AjouterLike($data);
             if($result === 'ok'){
                     Session::set('success', 'like Added');
-                    Redirect::to('like');
+                    header("Location: " . BASE_URL."like");
             }else{
-                Redirect::to('home');
+                header("Location: " . BASE_URL."home");
             }
        
     }
     public function Afficherlike(){
-//    $intpost=$_POST['intpost'];
+
        $idmember= $_SESSION['idmember'];
         $like = Post::Afficherlike($idmember);
            return $like;
-           
-        // var_dump($like);
-        // die;
-      
     }
 
     public function supprimerLike(){
         if(isset($_POST['intpost'])){
             $data['intpost'] = $_POST['intpost'];
-    //         echo '<pre>';
-    //    var_dump($data['intpost']);
-    //     die;
+
             $result = post::supprimerLike($data);
             if($result === 'ok'){
                  Session::set('success', 'post Deleted');
-                 Redirect::to('Profile');
+                 header("Location: " . BASE_URL."Profile");
             }else{
                echo $result ;
             }
@@ -153,11 +144,6 @@ class PostController
            
              return $result;
            
-            // if($result === 'ok'){
-            //       return 'like';
-            // }else{
-            //    return 'nolike';
-            // }
         }
         public function Ajouterpanier(){
             $data = array(   
@@ -169,9 +155,11 @@ class PostController
             $result = Post::Ajouterpanier($data);
             if($result === 'ok'){
                     Session::set('success', 'like Added');
-                    Redirect::to('panier');
+                    header("Location: " . BASE_URL."panier");
+                   
             }else{
-                Redirect::to('detailpost');
+                header("Location: " . BASE_URL."detailpost");
+              
             }
         }
         
@@ -195,7 +183,8 @@ class PostController
                         $result = post::supprimerpanier($data);
                         if($result === 'ok'){
                              Session::set('success', 'post Deleted');
-                             Redirect::to('panier');
+                             header("Location: " . BASE_URL."panier");
+                             
                         }else{
                            echo $result ;
                         }
@@ -207,24 +196,15 @@ class PostController
                        
                    }
                    public function valider($data){
-                    // $data = array(   
-                    //     'idmember' => $_SESSION['idmember'],
-                    //     'intpost' => $_POST['intpost'],
-                    // );
-
-                    // echo '<pre>';
-                    // die(var_dump($data));
-
                     if(isset($_POST['valider'])){
-                        // echo'aaaaa';
-                        // die();
+                      
                     $result = Post::valider($data);
                   
                     if($result === 'ok'){
                             Session::set('success', 'commend');
-                            Redirect::to('panier');
+                            header("Location: " . BASE_URL."panier");
                     }else{
-                        Redirect::to('home');
+                        header("Location: " . BASE_URL."panier");
                     }
                 }
             } 

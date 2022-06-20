@@ -3,7 +3,7 @@
 //  $Aff_Posts= new PostController();
 //  $AfficherPosts =$Aff_Posts->All_Post_id();
 // die(var_dump($AfficherPosts));
-require_once("./views/includes/navbar.php");
+// require_once("./views/includes/navbar.php");
 ?>
 <div class="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
 <section class="text-gray-600 body-font">

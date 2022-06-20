@@ -244,18 +244,9 @@ class Post
             $stm = DB::connect()->prepare('DELETE FROM panier   WHERE intpost=:intpost');
             $stm->bindParam(':intpost',$data[$i] );         
         $stm->execute();
-        // echo '<pre>';
-        // echo'aaaaa';
-        // die();
+       
         }
-        // var_dump($stmt);
-        // die;
-        // if ($exec=='execute') {
-        //             return 'ok';
-                    
-        //         } else {
-        //             return 'error';
-        //         } 
+       
     }
     
 }

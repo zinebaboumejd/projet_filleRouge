@@ -8,7 +8,8 @@
 <style>
 
 </style>
-<div class="h-screen flex">
+
+<div class="h-screen flex " >
   <div class="flex w-1/2 bg-gradient-to-r from-black-500 to-blue-500  i justify-around items-center">
     
     <div>
@@ -17,7 +18,7 @@
 
     </div>
   </div>
-  <div class="flex w-1/2 justify-center items-center bg-white">
+  <div class="flex w-1/2 justify-center items-center bg-white" style=" background-image: url('../../../FilleRouge/public/logoimage/backdrop-5729092_1920.jpg');">
 
                    
 

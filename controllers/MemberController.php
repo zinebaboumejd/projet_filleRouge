@@ -22,7 +22,7 @@ class MemberController{
                 
                 if($result === 'ok'){
                         Session::set('success', 'Account created!');
-                        Redirect::to('login');
+                        header("Location: " . BASE_URL."login");
                 }else{
                    echo $result ;
                 }
@@ -41,13 +41,16 @@ class MemberController{
                         $_SESSION['prenom'] = $result->prenom;
                         $_SESSION['rool'] = $result->rool;
                         if($result->rool == 0 ){
-                            Redirect::to('HomeMember');
+                            
+                            header("Location: " . BASE_URL."home");
                         }else{
-                            Redirect::to('HomeAdmin');
+                            header("Location: " . BASE_URL."HomeAdmin");
+                            // Redirect::to('HomeAdmin');
                         }
                 }else{
                     Session::set('error', 'Username or Password incorrect');
-                    Redirect::to('login');
+                    header("Location: " . BASE_URL."login");
+                  
                 }
             }
         }

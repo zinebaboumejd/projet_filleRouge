@@ -3,6 +3,7 @@ require_once './autoload.php';
 require_once("./views/includes/header.php");
 // require_once('./bootstrap.php');
 require_once("controllers/HomeController.php");
+// require_once("./views/includes/navbar.php");
 $home = new HomeController();
 
 

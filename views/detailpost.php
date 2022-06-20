@@ -1,8 +1,4 @@
-<?php 
-require_once("./views/includes/navbar.php");
 
-
-?>
 <?php
 // echo $_POST['intpost'];
 // echo $_SESSION['idmember'];
@@ -27,7 +23,7 @@ $Ajouterlike->Ajouterlike();
 // die();
 }
 
-// require_once("./views/includes/navbar.php");
+require_once("./views/includes/navbar.php");
 
 
 ?>
@@ -75,12 +71,12 @@ $Ajouterlike->Ajouterlike();
                     <div class="flex space-x-4 mb-6 text-sm font-medium">
                         <div class="flex-auto flex space-x-4">
 
-                            <?php if (isset($_SESSION['log'])) : ?>
+<?php if (isset($_SESSION['log'])) : ?>
                             <!-- ila kan mlogi -->
 
 
 
-                            <?php if (($_SESSION['rool'] == false)) :  ?>
+        <?php if (($_SESSION['rool'] == false)) :  ?>
                             <!--ila kan  USER -->
 
                             <?php if ($_SESSION['idmember']==$post->idmember ) :?>
@@ -89,7 +85,7 @@ $Ajouterlike->Ajouterlike();
                                 <input type="hidden" name="intpost" value="<?php echo $post->intpost ?>">
                                 <button
                                     class="h-10 px-6 font-semibold rounded-md border bg-red-500 border-slate-200 
-                                    flex p-2.5 bg-red-500 rounded-xl hover:rounded-3xl hover:bg-red-600 transition-all duration-300 text-white"
+                                    flex p-2.5  hover:rounded-3xl hover:bg-red-600 transition-all duration-300 text-white"
                                     type="submit">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
@@ -98,7 +94,7 @@ $Ajouterlike->Ajouterlike();
                             <form action="modifierpost" method="post">
                                 <input type="hidden" name="intpost" value="<?php echo  $post->intpost ?>">
                                 <button
-                                    class="h-10 px-6 font-semibold rounded-md border  border-slate-200  flex p-2.5 bg-yellow-500 rounded-xl hover:rounded-3xl hover:bg-yellow-600 transition-all duration-300 text-white"
+                                    class="h-10 px-6 font-semibold  border  border-slate-200  flex p-2.5 bg-yellow-500 rounded-xl hover:rounded-3xl hover:bg-yellow-600 transition-all duration-300 text-white"
                                     type="submit">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </button>
@@ -127,20 +123,11 @@ $Ajouterlike->Ajouterlike();
                                                         </button>
                                                     </form>
                                                     <?php  endif  ?>
-                            <!-- dowlod -->
-                            <!-- <form action="" method="POST">
-                                <button id="btn2"
-                                    class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200">
-                                    <a href="<?php //echo BASE_URL; 
-                                                        ?>"> <i class="fa-solid fa-circle-arrow-down"></i></a>
-                                </button>
-                                <input type="hidden" name="intpost" value="<?php echo  $post->intpost ;?>">
-
-                            </form> -->
+                            
 
                             <?php //------------------------------- ?>
                             <?php else:  ?>
-                           <?php   // if ($like=='like'):  ?>
+                           <?php   if ($like=='like'):  ?>
                                                     <form action="" method="POST">
                                                         <input type="hidden" name="intpost" value="<?php echo  $post->intpost ?>">
                                                         <button type="submit" name="submit"
@@ -149,7 +136,7 @@ $Ajouterlike->Ajouterlike();
                                                             <i class="fa-solid fa-heart "></i>
                                                         </button>
                                                     </form>
-                                                    <?php // else: ?>
+                                                    <?php  else: ?>
                                                     <form action="" method="POST">
                                                         <input type="hidden" name="intpost" value="<?php echo  $post->intpost ;?>">
                                                         <button type="submit" name="submit" 
@@ -159,7 +146,7 @@ $Ajouterlike->Ajouterlike();
 
                                                         </button>
                                                     </form>
-                                                    <?php // endif  ?>
+                                                    <?php  endif  ?>
                             <!-- dowlod -->
                             <form action="panier" method="POST">
                             <input type="hidden" name="intpost" value="<?php echo  $post->intpost ?>">
@@ -187,12 +174,8 @@ $Ajouterlike->Ajouterlike();
 
 
                             <?php  else : ?>
-                            <!--ila kan  ADMIN -->
-                            <p>dfcneaf,lkze,ld,</p>
-                            <?php  endif  ?>
-                            <?php  else : ?>
-                            <!-- ila makanch mlogi -->
-                            <button
+                             <!-- ila makanch mlogi -->
+                             <button
                                 class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200"
                                 type="button" aria-label="Like" id="btn1" onclick="myFunction()"> <a
                                     href="<?php echo BASE_URL; ?>login">
@@ -207,7 +190,25 @@ $Ajouterlike->Ajouterlike();
                                 <a href="<?php echo BASE_URL; ?>login"> <i
                                         class="fa-solid fa-circle-arrow-down"></i></a>
                             </button>
-                            <?php  endif  ?>
+                            
+    <?php  endif  ?>
+<?php  else : ?>
+                            <!-- ila makanch mlogi -->  <button
+                                class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200"
+                                type="button" aria-label="Like" id="btn1" onclick="myFunction()"> <a
+                                    href="<?php echo BASE_URL; ?>login">
+                                    <svg width="20" height="20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+
+                                    </svg></a>
+                            </button>
+                            <button id="btn2" onclick="Function()"
+                                class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200">
+                                <a href="<?php echo BASE_URL; ?>login"> <i
+                                        class="fa-solid fa-circle-arrow-down"></i></a>
+                            </button>
+ <?php  endif  ?>
 
 
 

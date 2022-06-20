@@ -1,5 +1,4 @@
 <?php 
-// require_once("./views/includes/navbar.php");
 
 if (isset($_POST['submit'])) {
 $Ajouterpanier=new PostController();
@@ -33,7 +32,8 @@ if (isset($_POST['valider'])) {
     //  echo "test".$i;
     }
     
-    
+    require_once("./views/includes/navbar.php");
+
 
 ?>
 
