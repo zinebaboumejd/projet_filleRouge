@@ -1,5 +1,5 @@
 <?php require_once("./views/includes/navbar.php"); ?>
-<section class="w-full h-[800px] bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100 header"
+<!-- <section class="w-full h-[800px] bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100 header"
     style=" background-image: url('../../../FilleRouge/public/logoimage/film-g72982ce4f_1920.jpg'); background-size:cover;">
     <div class="container w-full h-full px-8 sm:px-0 mx-auto flex flex-col justify-center">
 
@@ -7,9 +7,49 @@
         <p class="text-gray-200 mt-4">--------------</p>
     </div>
 
-</section>
+</section> -->
 
-
+<div class="py-16 bg-white">
+    <div  class="container m-auto px-6 space-y-8 text-gray-500 md:px-12 lg:px-20">
+        <div class="justify-center text-center gap-6 md:text-left md:flex lg:items-center  lg:gap-16">
+            <div class="order-last mb-6 space-y-6 md:mb-0 md:w-6/12 lg:w-6/12 ">
+                <p class="text-xl  text-gray-700 font-bold md:text-3xl">
+                    
+                
+                Soyez payé pour vos<span class="text-blue-500"> photos</span><br>
+Ne laissez pas vos photos prendre la poussière comme sur d'autres plateformes.
+Gagnez en visibilité et gagnez de l'argent pour votre entreprise avec les partenaires de <span class="text-blue-500">SewarBladk</span>.
+                </p>
+                
+                <!-- Buy now and benefit up to 30% off</h1>
+                <p class="text-lg">Be part of millions people around the world using tailus in modern User Interfaces.</p> -->
+                <!-- <div class="flex flex-row-reverse flex-wrap justify-center gap-4 md:gap-6 md:justify-end">
+                    <button type="button" title="Start buying" class="w-full py-3 px-6 text-center rounded-xl transition bg-gray-700 shadow-xl hover:bg-gray-600 active:bg-gray-700 focus:bg-gray-600 sm:w-max">
+                        <span class="block text-white font-semibold">
+                            Start buying
+                        </span>
+                    </button>
+                    <button type="button" title="more about" class="w-full order-first py-3 px-6 text-center rounded-xl bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 focus:bg-gray-200 sm:w-max">
+                        <span class="block text-gray-600 font-semibold">
+                            More about
+                        </span>
+                    </button>
+                </div> -->
+            </div>
+            <div class="grid grid-cols-5 grid-rows-4 gap-4 md:w-5/12 lg:w-6/12">
+                <div class="col-span-2 row-span-4">
+                    <img src="../../FilleRouge/public/logoimage/morocco-g975fb755e_1920.jpg" class="rounded-full" width="740" height="160" alt="shoes" loading="lazy">
+                </div>
+                <div class="col-span-2 row-span-2">
+                    <img src="../../FilleRouge/public/logoimage/snow-g8ff701711_1920.png" class="w-full h-full object-cover object-top rounded-xl" width="640" height="640" alt="shoe" loading="lazy">
+                </div>
+                <div class="col-span-3 row-span-3">
+                    <img src="../../FilleRouge/public/logoimage/rabat-g8b879f892_1920.jpg" class="w-full h-full object-cover object-top rounded-xl" width="640" height="427" alt="shoes" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <main class="my-8">
     <div class="container mx-auto px-6">
 
@@ -50,7 +90,7 @@
 
 
 <!-- component category -->
-<div class=" w-full p-8  h-80 flex justify-center font-sans  bg-gradient-to-r from-blue-900 via-blue-500 to-orange-700  ">
+<div class=" w-full p-8  h-80 flex justify-center font-sans  bg-gradient-to-r from-blue-900 via-blue-500 bg-indigo-200   shadow-xl">
     <div class="rounded bg-grey-light w-85 p-2">
         <h2 class="w-full text-3xl font-bold text-center sm:text-4xl md:text-5xl"> Le meilleur des meilleurs.</h2>
         <p class="">Nos éditeurs sont toujours à la recherche de contenu à couper le souffle à découvrir et à rester
@@ -177,7 +217,7 @@
 
 
 <!-- component -->
-<div class="bg-blue w-full p-8  h-80 flex justify-center font-sans  bg-gradient-to-r from-blue-900 via-blue-500 to-orange-700">
+<div class="bg-blue w-full p-8  h-80 flex justify-center font-sans  bg-gradient-to-r from-indigo-200 via-blue-500 bg-indigo-900">
     <div class="rounded bg-grey-light w-85 p-2">
         <h2 class="w-full text-3xl font-bold text-center sm:text-4xl md:text-5xl"> Le meilleur des meilleurs.</h2>
         <p>Nos éditeurs sont toujours à la recherche de contenu à couper le souffle à découvrir et à rester inspiré.

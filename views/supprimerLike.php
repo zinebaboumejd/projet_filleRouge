@@ -2,11 +2,11 @@
 // echo '<pre>';
 // var_dump($_POST);
 // die;
-	if(isset($_POST['idlike'])){
+if(isset($_POST['intpost'])){
        
-		$suplike = new PostController();
-		$suplike->supprimerlike();
-        Redirect::to("detailpost");
-	}
+    $suppanier = new PostController();
+    $suppanier->supprimerpanier();
+    Redirect::to("panier");
+}
  
 ?>

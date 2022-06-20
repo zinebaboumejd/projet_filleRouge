@@ -1,7 +1,7 @@
 <?php 
 
  $Aff_Posts= new PostController();
- $AfficherPosts =$Aff_Posts->All_Post_id();
+ $AfficherPosts =$Aff_Posts->AfficherPost();
 
 // die(var_dump($AfficherPosts));
 include("./views/includes/navbar.php");
@@ -37,29 +37,19 @@ include("./views/includes/navbar.php");
                     <p class="mt-1"><?php echo $AfficherPost['descreption'] ?></p>
                 </div>
 
-                <!--                   
-                    <form action="supprimerpost" method="post"
-                        class="mx-auto mt-6 flex w-full flex-col gap-3 px-5 sm:flex-row">
-                        <input type="hidden" name="intpost" value="<?php  //echo $AfficherPost['intpost'] ?>">
-                        <button type="submit"
-                            class="p-2.5 ml-2 text-sm font-medium text-white bg-red-700 rounded-lg border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-red-700 dark:focus:ring-blue-800"><i
-                                class="fa-solid fa-trash m-1"></i></button>
-                    </form> -->
-                <!-- <a href="#"  class="p-2.5 ml-2 text-sm font-medium text-white bg-red-700 rounded-lg border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-red-700 dark:focus:ring-blue-800"> 
-                    <i class="fa-solid fa-eye"></i>
-                    </a> -->
+              
                    
                 <form method="POST" action="detailpost">
                     <button type="submit"
                         class="flex-none flex items-center justify-center w-9 h-9 hover:bg-sky-800 rounded-md text-slate-300 border border-slate-200">
-                        <!--aria-label="Like"-->
+                       
                         <i class="fa-solid fa-eye">
                             <input type="hidden" name="intpost"  value="<?php  echo $AfficherPost['intpost'] ?>">
                         </i>
-                        <a href="detailpost"></a>
+                       
                     </button>
                 </form> 
-              
+                
             </div>
  
 

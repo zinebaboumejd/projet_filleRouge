@@ -1,6 +1,6 @@
           <?php if (empty($_SESSION['log']) ) : ?>
-            <nav
-              class=" flex items-center justify-between flex-wrap  bg-gradient-to-r from-blue-900 via-blue-500 to-orange-700  max-h-20 fixed w-full   ">
+          <nav
+              class=" flex items-center justify-between flex-wrap  bg-gradient-to-r from-blue-900 via-blue-500 to-orange-700  max-h-20 fixed w-full z-40  ">
               <div class="flex items-center flex-no-shrink text-white mr-6  ">
                   <img src="https://nemtroutes.com/img/logo/logo.png" alt="" class="h-12 xl:h-20  ">
 
@@ -15,34 +15,35 @@
                       </svg>
                   </button>
               </div>
-              <div id="main-nav" class="w-full flex-grow lg:flex items-center lg:w-auto hidden">
-                <a href="<?php echo BASE_URL; ?>home">
-              <img src="../../../FilleRouge/public/logoimage//logosb.png" class="h-12 flex items-center"  alt="">
-</a>
-              <div class="block lg:hidden">
-                  <button id="navbar-burger"
-                      class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
-                      <svg class="fill-current h-6 w-6 text-gray-700" viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <title>Menu</title>
-                          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                      </svg>
-                  </button>
-              </div>
-              <div id="main-nav" class="w-full flex-grow lg:flex items-center lg:w-auto hidden">
-                  <div class="text-sm lg:flex-grow mt-2 animated jackinthebox xl:mx-8">
-
-                      <a href="<?php echo BASE_URL; ?>AfficherPost"
-                          class="block lg:inline-block text-md font-bold  text-slate-50  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
-                          AfficherPost
-                      </a>
+              <div id="main-nav" class="w-full flex-grow lg:flex items-center 
+               hidden">
+                  <a href="<?php echo BASE_URL; ?>home">
+                      <img src="../../../FilleRouge/public/logoimage//logosb.png" class="h-12 flex items-center" alt="">
+                  </a>
+                  <div class="block lg:hidden">
+                      <button id="navbar-burger"
+                          class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
+                          <svg class="fill-current h-6 w-6 text-gray-700" viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <title>Menu</title>
+                              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                          </svg>
+                      </button>
                   </div>
-                  <button class="rounded-full bg-blue-700 p-2 mr-2 ml-aut ">
-                      <a href="<?php echo BASE_URL; ?>login" title="Logout" class="text-slate-50 hover:text-white">
-                          <i class="fas fa-user"></i> connecter
-                      </a>
-                  </button>
-              </div>
+                  <div id="main-nav" class="w-full flex-grow lg:flex items-center lg:w-auto hidden">
+                      <div class="text-sm lg:flex-grow mt-2 animated jackinthebox xl:mx-8">
+
+                          <a href="<?php echo BASE_URL; ?>AfficherPost"
+                              class="block lg:inline-block text-md font-bold  text-slate-50  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
+                              AfficherPost
+                          </a>
+                      </div>
+                      <button class="rounded-full bg-blue-700 p-2 mr-2 ml-aut ">
+                          <a href="<?php echo BASE_URL; ?>login" title="Logout" class="text-slate-50 hover:text-white">
+                              <i class="fas fa-user"></i> connecter
+                          </a>
+                      </button>
+                  </div>
           </nav>
           <!-- admiin -->
           <?php elseif (!empty($_SESSION['log']) && $_SESSION['rool']==true) : ?>
@@ -155,12 +156,13 @@
 
           <!-- User -->
           <?php elseif (!empty($_SESSION['log']) && $_SESSION['rool']==false) : ?>
-          <nav
-              class=" flex items-center justify-between flex-wrap  bg-gradient-to-r from-blue-900 via-blue-500 to-orange-700  max-h-20 fixed w-full   ">
+          <!-- <nav
+              class=" flex items-center justify-between flex-wrap  bg-gradient-to-r from-blue-900 via-blue-500 to-orange-700  max-h-20 fixed w-full   z-40">
               <div class="flex items-center flex-no-shrink text-white mr-6  ">
                   <img src="https://nemtroutes.com/img/logo/logo.png" alt="" class="h-12 xl:h-20  ">
-
               </div>
+            
+                </a>
               <div class="block lg:hidden">
                   <button id="navbar-burger"
                       class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
@@ -171,32 +173,23 @@
                       </svg>
                   </button>
               </div>
+              
               <div id="main-nav" class="w-full flex-grow lg:flex items-center lg:w-auto hidden">
-                <a href="<?php echo BASE_URL; ?>home">
+              
               <img src="../../../FilleRouge/public/logoimage//logosb.png" class="h-12 flex items-center"  alt="">
 </a>
+<a href="<?php echo BASE_URL; ?>HomeMember"
+                    class="flex justify-center lg:inline-block text-md font-bold  text-orange-500  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  pl-10 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
+                    HOME
                   <div class="text-sm lg:flex-grow  animated jackinthebox xl:mx-8  flex items-center">
                  
-    <a href="<?php echo BASE_URL; ?>HomeMember"
-                          class="block lg:inline-block text-md font-bold  text-slate-50  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
-                          Home
-                      </a>
-                      <!-- <a href="<?php echo BASE_URL; ?>AjouterPost"
-                          class="block lg:inline-block text-md font-bold  text-slate-50  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
-                          Ajouter Post
-                      </a> -->
-                      <!-- <a href="<?php echo BASE_URL; ?>AfficherPost"
+   
+                   
+                      <a href="<?php echo BASE_URL; ?>AfficherPost"
                           class="block lg:inline-block text-md font-bold  text-slate-50  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
                           AfficherPost
-                      </a> -->
-                      <!-- <a href="<?php echo BASE_URL; ?>Profile"
-                          class="block lg:inline-block text-md font-bold  text-slate-50  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
-                          Profile
-                      </a> -->
-                      <!-- <a href="<?php echo BASE_URL; ?>like"
-                          class="block lg:inline-block text-md font-bold  text-slate-50  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
-                          likes
-                      </a> -->
+                      </a>
+                   
                     
                   
                   </div>
@@ -207,15 +200,60 @@
                               </a>
                           </form>
                       </button>
+              </div> 
+          </nav>    -->
+          <div class="navbar bg-base-100 fixed z-40">
+              <div class="flex-1">
+                  <a class="btn btn-ghost normal-case text-xl">SewarBladek</a>
               </div>
-          </nav>    
-                      <?php endif; ?>
-                      <?php
+              <div class="flex mr-10 ">
+                  <a class="normal-case text-xl text-blue-800 lg:w-auto " href="<?php echo BASE_URL; ?>home">Home</a>
+              </div>
+              <div class="flex-1">
+                  <a class=" normal-case text-xl" href="<?php echo BASE_URL; ?>AfficherPost">Post</a>
+              </div>
+              <div class="flex-none">
+                  <ul class="menu menu-horizontal pl-5 mr-10">
+
+                      <li tabindex="0">
+                          <a>
+                              User
+                              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                  viewBox="0 0 24 24">
+                                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                              </svg>
+                          </a>
+                          <ul class="p-2 bg-base-100  mr-10">
+                          <li class=" mr-10"><span>
+                          <i class="fa-solid fa-user"></i>
+                                      <a href="<?php echo BASE_URL; ?>Profile"> Profil </a></li>
+                             
+                          <li class=" mr-10"><span>
+                          <i class="fa-solid fa-square-plus"></i>
+                                      <a href="<?php echo BASE_URL; ?>AjouterPost"> Post </a></li>
+                             
+                          <li class=" mr-10"><span>
+                          <i class="fa-solid fa-heart"></i>
+                                      <a href="<?php echo BASE_URL; ?>like"> likes </a></li>
+                              <li class=" mr-10"><span>
+                                      <i class="fa-solid fa-basket-shopping"></i>
+                                      <a href="<?php echo BASE_URL; ?>panier"> Panier </a></li>
+                          </ul>
+                      </li>
+                      <!-- <li><a>Item 3</a></li> -->
+                  </ul>
+                  <div class="navbar-end  ">
+                      <a class="btn bg-blue-800 hover:bg-blue-700" href="<?php echo BASE_URL; ?>logout">Deconnex</a>
+                  </div>
+              </div>
+          </div>
+          <?php endif; ?>
+          <?php
             
             ?>
 
 
-                      <!-- 
+          <!-- 
             <?php if (!empty($_SESSION['log'])) : ?>
                 <button class="rounded-full bg-orange-500 p-2 mr-2 ml-aut">
                     <form class="d-flex">
@@ -240,7 +278,7 @@
 
 
 
-                      <?php
+          <?php
 
             ?>
 
@@ -249,11 +287,11 @@
 
 
 
-                  </div>
+          </div>
 
 
-              </div>
+          </div>
 
 
-              </div>
+          </div>
           </nav>

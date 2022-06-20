@@ -53,7 +53,7 @@
                 </svg>
                 <input class="pl-2 outline-none border-none" type="email" id='email' name="email" placeholder="Email" />
             </div>
-            <div class="flex items-center border-2 py-2 px-3 rounded-2xl">
+            <div class="flex items-center border-2 py-2 px-3 rounded-2xl  mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20"
                     fill="currentColor">
                     <path fill-rule="evenodd"
@@ -63,10 +63,11 @@
                 <input class="pl-2 outline-none border-none" type="password" name="motedepass"
                     placeholder="mote de pase" />
             </div>
+          
             <button type="submit" name="submit"
-                class="block w-full bg-indigo-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2">Login</button>
+                class="block w-full bg-indigo-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2">S'inscrire</button>
             <span class="text-sm ml-2 hover:text-blue-500 cursor-pointer"> <a href="<?php echo BASE_URL;?>login"
-                    class=" btn-link">connecter</a>
+                    class=" btn-link">Connexion</a>
             </span>
         </form>
     </div>

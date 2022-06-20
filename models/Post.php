@@ -25,8 +25,9 @@ class Post
         $stmt->execute();
 
         return $stmt->fetchAll();
-        var_dump($stmt->fetchAll());
+        // var_dump($stmt->fetchAll());
     }
+
     static public function AfficherPost_id($idmember)
     {
         $stmt = DB::connect()->prepare('SELECT * FROM post WHERE idmember=:idmember  ');
@@ -34,6 +35,8 @@ class Post
         $stmt->execute();
         return $stmt->fetchAll();
     }
+
+
     static public function All_AfficherPost_id($idmember)
     {
         if ($_SESSION['rool'] == 1) {
@@ -64,7 +67,9 @@ class Post
     }
     static public function un_Post($data)
     {
-        $intpost = $data['intpost'];
+        // print_r($data);
+        // die;
+        $intpost = $data;
         try {
             $query = 'SELECT * FROM post WHERE intpost=:intpost';
             $stmt = DB::connect()->prepare($query);
@@ -122,21 +127,15 @@ class Post
 
     static public function Afficherlike($idmember)
     {
-// echo $idmember;
-// die;
-        $stmt = DB::connect()->prepare('SELECT p.* ,l.idlike   FROM post p inner join like_ l WHERE  l.intpost=p.intpost and p.idmember=:idmember  ');
+        $stmt = DB::connect()->prepare('SELECT * FROM `post` INNER JOIN like_ WHERE like_.intpost=post.intpost and like_.idmember=:idmember  ');
         $stmt->bindParam(':idmember', $idmember);
+      
+        // $stmt->bindParam(':intpost', $intpost);
         $stmt->execute();
         return $stmt->fetchAll();
-        
-        // try {
-        //     $stmt = DB::connect()->prepare('SELECT p.* ,l.idlike   FROM post p inner join like_ l WHERE  l.intpost=p.intpost and p.idmember=l.idmember'  );
-        //     $stmt->execute(array(":intpost" => $idmember));
-        //     $stmt->execute();
-        //       return $stmt->fetchAll();
-        // } catch (PDOException $ex) {
-        //     echo 'error' . $ex->getMessage();
-        // }
+        // print_r($stmt->fetchAll());
+        // die;
+       
     }
 
     static public function AjouterLike($data)
@@ -158,13 +157,11 @@ class Post
     //     echo '<pre>';
     //   var_dump($data);
     //   die;
-        $id = $data['idlike'];
-        
-    
+        $id = $data['intpost'];    
         try {
-            $query = 'DELETE FROM like_ WHERE idlike=:idlike';
+            $query = 'DELETE FROM like_ WHERE intpost=:intpost';
             $stmt = DB::connect()->prepare($query);
-            $stmt->execute(array(":idlike" => $id));
+            $stmt->execute(array(":intpost" => $id));
             if ($stmt->execute()) {
                 return 'ok';
             }
@@ -172,22 +169,63 @@ class Post
             echo 'error' . $ex->getMessage();
         }
     }
-    // static public function likepost($data)
-    // { 
-    //             $stmt = DB::connect()->prepare('SELECT * FROM like_ WHERE idmember = :idmember AND intpost = :intpost');
-    //             $stmt->execute(array(":idmember" => $data["idmember"], ":intpost" => $data["intpost"]));
-    //             $result = $stmt->fetchAll();
-    //             // var_dump($result);
-    //             // die;
-    //             if (count($result) > 0) {
-    //                 return "Product already in wishlist";
+    static public function testLike($intpost,$idmember)
+    {
+        $stmt = DB::connect()->prepare('SELECT *  FROM  like_ WHERE idmember=:idmember and intpost=:intpost ');
+        $stmt->bindParam(':idmember', $idmember);
+        $stmt->bindParam(':intpost', $intpost);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_OBJ);
 
-    //             } else {
-    //                 $stmt = DB::connect()->prepare('INSERT INTO like_ (idpost, idmember) VALUES (:idmember, :intpost)');
-    //                 $stmt->execute(array(":idmember" => $data["idmember"], ":intpost" => $data["intpost"]));
-    //                 return "ok";
-    //             }
-
-
-    // }
+       
+        }
+         public function Ajouterpanier($data)
+        {
+            // print_r($data);
+            // die;
+            $stmt = DB::connect()->prepare('INSERT INTO panier (idmember,intpost)  VALUES (:idmember,:intpost)');
+            $stmt->bindParam(':idmember', $data['idmember']);
+            $stmt->bindParam(':intpost', $data['intpost']);
+            if ($stmt->execute()) {
+                return 'ok';
+                
+            } else {
+                return 'error';
+            }
+        }
+        static public function Afficherpanier($idmember)
+        {
+            $stmt = DB::connect()->prepare('SELECT * FROM `post` INNER JOIN panier WHERE panier.intpost=post.intpost and panier.idmember=:idmember  ');
+            $stmt->bindParam(':idmember', $idmember);
+          
+            // $stmt->bindParam(':intpost', $intpost);
+            $stmt->execute();
+            return $stmt->fetchAll();
+            // print_r($stmt->fetchAll());
+            // die;
+           
+        }
+        static public function supprimerpanier($data)
+    {
+    //     echo '<pre>';
+    //   var_dump($data);
+    //   die;
+        $id = $data['intpost'];    
+        try {
+            $query = 'DELETE FROM panier WHERE intpost=:intpost';
+            $stmt = DB::connect()->prepare($query);
+            $stmt->execute(array(":intpost" => $id));
+            if ($stmt->execute()) {
+                return 'ok';
+            }
+        } catch (PDOException $ex) {
+            echo 'error' . $ex->getMessage();
+        }
+    }
+    static function total(){
+        $stmt = DB::connect()->prepare('SELECT sum(post.prix) as totalprix FROM `post`  INNER JOIN panier  WHERE  panier.intpost=post.intpost  ');
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+     
 }

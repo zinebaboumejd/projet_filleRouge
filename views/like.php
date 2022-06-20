@@ -1,8 +1,9 @@
 <?php
-//  require_once("./views/includes/navbar.php");
+ require_once("./views/includes/navbar.php");
 
 $Aff_like = new PostController();
 $Afficherlikes = $Aff_like->Afficherlike();
+
 // echo '<pre>';
 // die(var_dump($Afficherlikes));
 // die;
@@ -11,13 +12,13 @@ $Afficherlikes = $Aff_like->Afficherlike();
 ?>
 
 <div id="menu" class="container mx-auto px-4 lg:pt-24 lg:pb-64">
-    <div class="flex flex-wrap text-center justify-center">
-        <div class="w-full lg:w-6/12 px-4">
+    <div class="flex flex-wrap text-center justify-center ">
+        <div class="w-full lg:w-6/12 px-4 mt-20">
             <h2 class="text-4xl font-semibold text-black">Liste des liké</h2>
-            <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
+            <!-- <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut mollis nulla, ut efficitur massa.
                 Praesent vitae iaculis orci
-            </p>
+            </p> -->
         </div>
     </div>
     <?php foreach ($Afficherlikes as $Afficherlike) : ?>
@@ -28,7 +29,7 @@ $Afficherlikes = $Aff_like->Afficherlike();
             <div class="">
                 <button type="submit"><img alt="..." src="./public/image/<?= $Afficherlike['image'] ?>"
                         class="h-24 w-24 rounded  mx-auto" /></button>
-                <input type="hidden" name="intpost" value="<?php echo  $_SESSION['intpost']; ?>">
+                <input type="hidden" name="intpost" value="<?php echo  $Afficherlike['intpost']; ?>">
 
             </div>
 
@@ -43,7 +44,7 @@ $Afficherlikes = $Aff_like->Afficherlike();
     </form>
     <form action="supprimerLike" method="post" class="h-full flex items-center">
         <div class=" ">
-            <input type="hidden" name="idlike" value="<?php echo  $Afficherlike['idlike'] ?>">
+            <input type="hidden" name="intpost" value="<?php echo  $Afficherlike['intpost'] ?>">
             <button class="h-10 px-6 font-semibold rounded-md border bg-red-500 border-slate-200 text-slate-900"
                 type="submit">
                 <i class="fa-solid fa-trash"></i>

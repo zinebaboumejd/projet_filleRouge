@@ -26,7 +26,7 @@ class PostController
                 if($result === 'ok'){
                     // echo 'Yoo';
                     Session::set('success', ' Added post');
-                    Redirect::to('AfficherPost');
+                    Redirect::to('Profile');
                    // header('Location: http://localhost/FilleRouge/AfficherPost');
             }else{
                echo $result ;
@@ -41,23 +41,25 @@ class PostController
             return $posts;
           
         }
-        public function All_Post_id(){ // afichier selant dmember
-       if (!isset($_SESSION['log'])){
-        $posts= Post::AfficherPost();
-       }else{
-                   $posts = Post::All_AfficherPost_id($_SESSION['idmember']);      
-        }
+        public function AfficherPost_id(){ // afichier selant dmember
+                   $posts = Post::AfficherPost_id($_SESSION['idmember']);      
       
         return $posts;
     }
+
+
+
         public function un_Post(){
-            if(isset($_POST['intpost'])){
-                $data = array(
-                    'intpost' => $_POST['intpost']
-                );
-                $post = Post::un_Post($data);
-                return $post;
-            }
+
+            $post = Post::un_Post($_POST['intpost']);
+            return $post;
+            // if(isset($_POST['intpost'])){
+            //     $data = array(
+            //         'intpost' => $_POST['intpost']
+            //     );
+            //     $post = Post::un_Post($data);
+            //     return $post;
+            // }
         }
         
        public function supprimerPost(){
@@ -66,7 +68,7 @@ class PostController
             $result = post::supprimerPost($data);
             if($result === 'ok'){
                  Session::set('success', 'post Deleted');
-                 Redirect::to('AfficherPost');
+                 Redirect::to('Profil');
             }else{
                echo $result ;
             }
@@ -99,7 +101,7 @@ class PostController
         }
        }
        public function AjouterLike(){
-        if(isset($_POST['submit'])){
+        // if(isset($_POST['submit'])){
             // echo '<pre>';
             // print_r($_POST);
             // print_r($_SESSION);      
@@ -116,53 +118,101 @@ class PostController
             }else{
                 Redirect::to('home');
             }
-        }
+        // }
     }
     public function Afficherlike(){
-
-       
-        $like = Post::Afficherlike($_SESSION['idmember']);
+//    $intpost=$_POST['intpost'];
+       $idmember= $_SESSION['idmember'];
+        $like = Post::Afficherlike($idmember);
            return $like;
            
-        var_dump($like);
-        die;
+        // var_dump($like);
+        // die;
       
     }
 
     public function supprimerLike(){
-        if(isset($_POST['idlike'])){
-            $data['idlike'] = $_POST['idlike'];
+        if(isset($_POST['intpost'])){
+            $data['intpost'] = $_POST['intpost'];
     //         echo '<pre>';
-    //    var_dump($data['idlike']);
+    //    var_dump($data['intpost']);
     //     die;
             $result = post::supprimerLike($data);
             if($result === 'ok'){
                  Session::set('success', 'post Deleted');
-                 Redirect::to('detailpost');
+                 Redirect::to('Profile');
             }else{
                echo $result ;
             }
         }
        }
 
-    // public function likepost()
-    // {
+       public function testLike(){
+       
+          
+                $idmember =$_SESSION['idmember'];
+                 $intpost=$_POST['intpost'];
 
-    //     if (isset($_POST["submit"])) {
-    //         $data = array(
-    //             "idmember" => $_SESSION["idmember"],
-    //             "intpost" => $_POST["intpost"]
-    //         );
-    //         $result = Post::likepost($data);
+            $result = Post::testLike($idmember,$intpost);
            
-    //         if ($result === "ok") {
-    //             Session::set("success", "product added to wishlist!");
-    //             Redirect::to("Profile");
-    //         } else {
-    //             Session::set("error", "Product already in wishlist!");
-    //             Redirect::to("HomeMemeber");
-    //         }
-    //     }
-    // }
+             return $result;
+           
+            // if($result === 'ok'){
+            //       return 'like';
+            // }else{
+            //    return 'nolike';
+            // }
+        }
+        public function Ajouterpanier(){
+            $data = array(   
+                'idmember' => $_SESSION['idmember'],
+                'intpost' => $_POST['intpost'],
+            );
+            // die(var_dump($data));
+            if(isset($_POST['submit'])){
+            $result = Post::Ajouterpanier($data);
+            if($result === 'ok'){
+                    Session::set('success', 'like Added');
+                    Redirect::to('panier');
+            }else{
+                Redirect::to('detailpost');
+            }
+        }
+        
+        }
+        public function Afficherpanier(){
+            //    $intpost=$_POST['intpost'];
+                   $idmember= $_SESSION['idmember'];
+                    $like = Post::Afficherpanier($idmember);
+                       return $like;
+                       
+                    // var_dump($like);
+                    // die;
+                  
+                }
+                public function supprimerpanier(){
+                    if(isset($_POST['intpost'])){
+                        $data['intpost'] = $_POST['intpost'];
+                //         echo '<pre>';
+                //    var_dump($data['intpost']);
+                //     die;
+                        $result = post::supprimerpanier($data);
+                        if($result === 'ok'){
+                             Session::set('success', 'post Deleted');
+                             Redirect::to('panier');
+                        }else{
+                           echo $result ;
+                        }
+                    }
+                   }
+                   public function totalprix(){
+                    $total = Post::total();
+                       return $total;
+                       
+                   }
+                
 
-}
+ }
+
+
+    
