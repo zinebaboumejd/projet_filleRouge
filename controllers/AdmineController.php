@@ -58,5 +58,10 @@ class AdmineController{
         $afficher_member = Admin:: Affichercommande();
         return $afficher_member;
     }
+    public function totallike(){
+        $total =Admin::totallike();
+           return $total;
+           
+       }
       
 }

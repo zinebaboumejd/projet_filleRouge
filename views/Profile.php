@@ -7,6 +7,7 @@
 //  die;
 require_once("./views/includes/navbar.php");
 ?>
+<div  class="min-h-[80vh]">
     <div class="max-w-2xl mx-auto pt-[10%]">
 
         <div class="px-3 py-2">
@@ -14,7 +15,7 @@ require_once("./views/includes/navbar.php");
             <div class="flex flex-col gap-1 text-center">
                 <a class="block mx-auto bg-center bg-no-repeat bg-cover w-20 h-20 rounded-full border border-gray-400 shadow-lg"
                     href=""
-                    style="background-image: url('https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg')"></a>
+                    style="background-image: url('../../../FilleRouge/public/logoimage/man-g39cec5cb0_1280.png')"></a>
                 <p class="font-serif font-semibold"><?php  echo $_SESSION['nom'] .' '.$_SESSION['prenom'] ?></p>
                 <span class="text-sm text-gray-400">status </span>
             </div>
@@ -36,3 +37,4 @@ require_once("./views/includes/navbar.php");
         </div>
     </div>
 </div>
+            </div>

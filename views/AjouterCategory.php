@@ -23,8 +23,9 @@ $supprimercategory->supprimercategory();
 
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script> -->
-
+<div  class="min-h-[80vh]">
 <section class="text-gray-700 body-font flex md:flex-row flex-col items-center bg-white pt-20">
+
     <div
         class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
         <h1 class="title-font :text-4xl text-3xl mb-4 font-medium text-gray-900">Affichier category</h1>
@@ -87,8 +88,8 @@ $supprimercategory->supprimercategory();
             </form>
         </div>
     </div>
-
 </section>
+</div>
 
 <!-- <div class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gray-50 p-8 sm:p-12">
     <div class="w-full max-w-4xl rounded-md border-2 border-gray-100 bg-white p-14">

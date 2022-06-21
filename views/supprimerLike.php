@@ -6,7 +6,7 @@ if(isset($_POST['intpost'])){
     
     $suppanier = new PostController();
     $suppanier->supprimerLike();
-    Redirect::to("like");
+    header("Location: ".BASE_URL."like");
 }
  
 ?>

@@ -63,7 +63,11 @@
                 <input class="pl-2 outline-none border-none" type="password" name="motedepass"
                     placeholder="mote de pase" />
             </div>
-          
+            <!-- <div class="flex items-center border-2 py-2 px-3 rounded-2xl  mb-4">
+                <input name="image" class="pl-2 outline-none border-none" type="file" name="motedepass"
+                    placeholder="mote de pase" />
+            </div>
+           -->
             <button type="submit" name="submit"
                 class="block w-full bg-indigo-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2">S'inscrire</button>
             <span class="text-sm ml-2 hover:text-blue-500 cursor-pointer"> <a href="<?php echo BASE_URL;?>login"

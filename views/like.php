@@ -10,7 +10,7 @@ $Afficherlikes = $Aff_like->Afficherlike();
 
 
 ?>
-
+<div  class="min-h-[80vh]">
 <div id="menu" class="container mx-auto px-4 lg:pt-24 lg:pb-64 ">
     <div class="flex flex-wrap text-center justify-center ">
         <div class="w-full lg:w-6/12 px-4 mt-20">
@@ -57,4 +57,5 @@ $Afficherlikes = $Aff_like->Afficherlike();
 </div>
 </div>
 
+</div>
 </div>

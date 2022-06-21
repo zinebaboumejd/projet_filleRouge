@@ -1,5 +1,7 @@
 <?php 
 	MemberController::logout();
-	 Redirect::to('login');
+	
+	// header("Location: " . BASE_URL."login");
+		
 	
 ?>

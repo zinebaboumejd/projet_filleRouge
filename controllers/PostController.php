@@ -8,7 +8,6 @@ class PostController
                 $ext = pathinfo($_FILES["image"]["name"],PATHINFO_EXTENSION);
                 $new_name = time().'.'.$ext;
                 $target = getcwd().'\public\image\\'.$new_name; //C:\wamp64\www\FilleRouge
-                // echo $target;
                 move_uploaded_file($_FILES["image"]["tmp_name"],$target);
                 $data = array(                 
                     'titrei_mg' => $_POST['titrei_mg'],
@@ -26,7 +25,6 @@ class PostController
                 if($result === 'ok'){
                     // echo 'Yoo';
                     // Session::set('success', ' Added post');
-                    Redirect::to('Profile');
                     header("Location: " . BASE_URL."AfficherPost");
              
             }else{
@@ -62,7 +60,6 @@ class PostController
             $data['intpost'] = $_POST['intpost'];
             $result = post::supprimerPost($data);
             if($result === 'ok'){
-                 Session::set('success', 'post Deleted');
                  header("Location: " . BASE_URL."Profil");
                
             }else{
@@ -89,7 +86,6 @@ class PostController
             );
             $result = Post::modifierPost($data);
             if($result === 'ok'){
-                Session::set('success', 'post Updated');
                 header("Location: " . BASE_URL."AfficherPost");
                   
             }else{
@@ -106,7 +102,6 @@ class PostController
             // die(var_dump($data));
             $result = Post::AjouterLike($data);
             if($result === 'ok'){
-                    Session::set('success', 'like Added');
                     header("Location: " . BASE_URL."like");
             }else{
                 header("Location: " . BASE_URL."home");
@@ -126,8 +121,7 @@ class PostController
 
             $result = post::supprimerLike($data);
             if($result === 'ok'){
-                 Session::set('success', 'post Deleted');
-                 header("Location: " . BASE_URL."Profile");
+                 header("Location: ".BASE_URL."Profile");
             }else{
                echo $result ;
             }
@@ -154,7 +148,6 @@ class PostController
             if(isset($_POST['submit'])){
             $result = Post::Ajouterpanier($data);
             if($result === 'ok'){
-                    Session::set('success', 'like Added');
                     header("Location: " . BASE_URL."panier");
                    
             }else{
@@ -182,7 +175,6 @@ class PostController
                 //     die;
                         $result = post::supprimerpanier($data);
                         if($result === 'ok'){
-                             Session::set('success', 'post Deleted');
                              header("Location: " . BASE_URL."panier");
                              
                         }else{
@@ -201,13 +193,13 @@ class PostController
                     $result = Post::valider($data);
                   
                     if($result === 'ok'){
-                            Session::set('success', 'commend');
                             header("Location: " . BASE_URL."panier");
                     }else{
                         header("Location: " . BASE_URL."panier");
                     }
                 }
             } 
-
+          
+            
           
 } 

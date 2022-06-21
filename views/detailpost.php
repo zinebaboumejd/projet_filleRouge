@@ -1,5 +1,5 @@
 <?php 
-require_once("./views/includes/navbar.php");
+// require_once("./views/includes/navbar.php");
 
 
 ?>
@@ -27,7 +27,8 @@ $Ajouterlike->Ajouterlike();
 // die();
 }
 
-// require_once("./views/includes/navbar.php");
+$totallike=new AdmineController();
+$total=$totallike->totallike();
 
 
 ?>
@@ -35,7 +36,7 @@ $Ajouterlike->Ajouterlike();
 
 
 <div class="">
-    
+
     <div class='flex max-w-xl  bg-white shadow-md rounded-lg overflow-hidden mx-auto pt-20'>
         <div class='flex items-center w-full'>
             <div class='w-full'>
@@ -84,7 +85,7 @@ $Ajouterlike->Ajouterlike();
                             <!--ila kan  USER -->
 
                             <?php if ($_SESSION['idmember']==$post->idmember ) :?>
-                                <!-- delete -->
+                            <!-- delete -->
                             <form action="supprimerpost" method="post">
                                 <input type="hidden" name="intpost" value="<?php echo $post->intpost ?>">
                                 <button
@@ -108,62 +109,53 @@ $Ajouterlike->Ajouterlike();
                             <!-- like -->
                             <?php     ?>
                             <?php    if (in_array($test,$like )):  ?>
-                                                    <form action="" method="POST">
-                                                        <input type="hidden" name="intpost" value="<?php echo  $post->intpost ?>">
-                                                        <button type="submit" name="submit"
-                                                            class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border  border-slate-200 "
-                                                            aria-label="Like" id="btn1" onclick="" style="color: red;">
-                                                            <i class="fa-solid fa-heart "></i>
-                                                        </button>
-                                                    </form>
-                                                    <?php else: ?>
-                                                    <form action="" method="POST">
-                                                        <input type="hidden" name="intpost" value="<?php echo  $post->intpost ;?>">
-                                                        <button type="submit" name="submit"
-                                                            class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border  border-slate-200 "
-                                                            aria-label="Like" id="btn1" onclick="">
-                                                            <i class="fa-solid fa-heart "></i>
-
-                                                        </button>
-                                                    </form>
-                                                    <?php  endif  ?>
-                            <!-- dowlod -->
-                            <!-- <form action="" method="POST">
-                                <button id="btn2"
-                                    class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200">
-                                    <a href="<?php //echo BASE_URL; 
-                                                        ?>"> <i class="fa-solid fa-circle-arrow-down"></i></a>
+                            <form action="" method="POST">
+                                <input type="hidden" name="intpost" value="<?php echo  $post->intpost ?>">
+                                <button type="submit" name="submit"
+                                    class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border  border-slate-200 "
+                                    aria-label="Like" id="btn1" onclick="" style="color: red;">
+                                    <i class="fa-solid fa-heart "></i>
                                 </button>
+                            </form>
+                            <?php else: ?>
+                            <form action="" method="POST">
                                 <input type="hidden" name="intpost" value="<?php echo  $post->intpost ;?>">
+                                <button type="submit" name="submit"
+                                    class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border  border-slate-200 "
+                                    aria-label="Like" id="btn1" onclick="">
+                                    <i class="fa-solid fa-heart "></i>
 
-                            </form> -->
+                                </button>
+                            </form>
+                            <?php  endif  ?>
+       
 
                             <?php //------------------------------- ?>
                             <?php else:  ?>
-                           <?php   // if ($like=='like'):  ?>
-                                                    <form action="" method="POST">
-                                                        <input type="hidden" name="intpost" value="<?php echo  $post->intpost ?>">
-                                                        <button type="submit" name="submit"
-                                                            class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border  border-slate-200 "
-                                                            aria-label="Like" id="btn1" onclick="" style="color: red;">
-                                                            <i class="fa-solid fa-heart "></i>
-                                                        </button>
-                                                    </form>
-                                                    <?php // else: ?>
-                                                    <form action="" method="POST">
-                                                        <input type="hidden" name="intpost" value="<?php echo  $post->intpost ;?>">
-                                                        <button type="submit" name="submit" 
-                                                            class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border  border-slate-200 "
-                                                            aria-label="Like" id="btn1" onclick="">
-                                                            <i class="fa-solid fa-heart "></i>
+                            <?php    if ($like=='like'):  ?>
+                            <form action="" method="POST">
+                                <input type="hidden" name="intpost" value="<?php echo  $post->intpost ?>">
+                                <button type="submit" name="submit"
+                                    class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border  border-slate-200 "
+                                    aria-label="Like" id="btn1" onclick="" style="color: red;">
+                                    <i class="fa-solid fa-heart "></i>
+                                </button>
+                            </form>
+                            <?php  else: ?>
+                            <form action="" method="POST">
+                                <input type="hidden" name="intpost" value="<?php echo  $post->intpost ;?>">
+                                <button type="submit" name="submit"
+                                    class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border  border-slate-200 "
+                                    aria-label="Like" id="btn1" onclick="">
+                                    <i class="fa-solid fa-heart "></i>
 
-                                                        </button>
-                                                    </form>
-                                                    <?php // endif  ?>
+                                </button>
+                            </form>
+                            <!-- <?php  endif  ?> -->
                             <!-- dowlod -->
                             <form action="panier" method="POST">
-                            <input type="hidden" name="intpost" value="<?php echo  $post->intpost ?>">
-                                <button id="telecharger"  type="submit" name="submit"
+                                <input type="hidden" name="intpost" value="<?php echo  $post->intpost ?>">
+                                <button id="telecharger" type="submit" name="submit"
                                     class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200">
                                     <a href="<?php //echo BASE_URL; 
                                                         ?>"> <i class="fa-solid fa-circle-arrow-down"></i></a>
@@ -188,7 +180,16 @@ $Ajouterlike->Ajouterlike();
 
                             <?php  else : ?>
                             <!--ila kan  ADMIN -->
-                            <p>dfcneaf,lkze,ld,</p>
+                            <form action="panier" method="POST">
+
+                                <div class="flex-none flex items-center justify-center rounded-md text-red-600 border border-slate-200 ">  
+                                    <i class="fa-solid fa-heart mx-4" ></i>
+                                       <span class="text-lg"> <?php echo  $total[0][0];  ?></span>
+                                    </div>
+
+                                </div>
+                            </form>
+
                             <?php  endif  ?>
                             <?php  else : ?>
                             <!-- ila makanch mlogi -->

@@ -1,4 +1,8 @@
-<?php require_once("./views/includes/navbar.php"); ?>
+<?php 
+
+require_once("./views/includes/navbar.php");
+
+?>
 
 
 <div class="py-16 bg-white "   style=" background-image: url('../../../FilleRouge/public/logoimage/backdrop-5729092_1920.jpg');" id="particles-js">

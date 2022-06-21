@@ -71,4 +71,10 @@ static public function Affichercommande()
     return $stmt->fetchAll();
 
 }
+static public function totallike(){
+    $stmt = DB::connect()->prepare('SELECT count(idlike) as totallike FROM `like_` WHERE intpost=:intpost ');
+    $stmt->bindParam(':intpost',$_POST['intpost']);
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
 }

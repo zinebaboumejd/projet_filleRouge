@@ -15,6 +15,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Sewarbeladk</title>
 </head>
+
 <body  >
+    <?php
+        // include("./views/includes/navbar.php");
+    ?>
 
 <!-- oncontextmenu="return false" -->
