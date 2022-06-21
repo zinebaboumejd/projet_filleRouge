@@ -39,7 +39,7 @@ if (isset($_POST['valider'])) {
 
 
 
-<div class="grid grid-cols-1 md:lg:xl:grid-cols-3 group bg-white shadow-xl shadow-neutral-100 border ">
+<div class="grid grid-cols-1 md:lg:xl:grid-cols-3 group pb-64 ">
  
       <div class=" bg-white px-10 py-10 inset-x-80  w-[800px] ">
         <div class="flex justify-center border-b pb-8 mt-10">

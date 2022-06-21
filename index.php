@@ -1,14 +1,14 @@
 <?php
 require_once './autoload.php';
 require_once("./views/includes/header.php");
-// require_once('./bootstrap.php');
+require_once('./bootstrap.php');
 require_once("controllers/HomeController.php");
-// require_once("./views/includes/navbar.php");
+require_once("./views/includes/navbar.php");
 $home = new HomeController();
 
 
 $pages=['home','register','login','logout','cart','AjouterPost','HomeMember','HomeAdmin','AfficherPost','supprimerpost','modifierpost',
-'Memebers','detailpost','AfficherMember','Profile','AjouterCategory','like','supprimerLike','Dpost','panier','supprimerpanier'];
+'Memebers','detailpost','AfficherMember','Profile','AjouterCategory','like','supprimerLike','Dpost','panier','supprimerpanier','Commondes'];
 
 if(isset($_SESSION['log']) && $_SESSION['log'] == true){
     //  require_once("./views/includes/navbar.php");

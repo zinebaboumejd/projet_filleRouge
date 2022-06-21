@@ -69,7 +69,10 @@ if(isset($_POST['intpost'])){
                                     class="bg-sky-800 font-semibold text-white p-2 w-32 rounded-full hover:bg-sky-700 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2">
 
                             </div>
+                        </div>
+                    </div>
                 </form>
+                
             </div>
         </div>
     </div>

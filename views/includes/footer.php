@@ -1,4 +1,4 @@
-<footer class="footer footer-center p-10 text-base-content font-proza rounded bg-blue-50">
+<footer class="footer footer-center p-10 text-base-content font-proza rounded bg-blue-50  ">
 <!-- <div class="grid grid-flow-col gap-4 text-[#000] " style=" background-image: url('../../../FilleRouge/public/logoimage/backdrop-5729092_1920.jpg');"  > -->
 <div class="grid grid-flow-col gap-4 text-[#000] ">
     <img src="../../../FilleRouge/public/logoimage/Groupe 27.png" alt="">

@@ -23,18 +23,40 @@ class AdmineController{
             $result = Admin::Ajouter_category($data);
             if($result === 'ok'){
                     Session::set('success', ' category Ajouter');
-                    Redirect::to('home');
+                    header("Location: " . BASE_URL."AjouterCategory");
             }else{
                echo $result ;
             }
         }
     }
+   
     public function afficherselect(){
         $category = Admin::AfficherSelect();
-       
-        // echo "<pre>";
-        // echo print_r($category);
-        // die;
         return $category;
     }
+    public function affichermember(){
+        $afficher_member = Admin::afficher_member();
+        return $afficher_member;
+    }
+    public function supprimercategory(){
+        if(isset($_POST['idcategory'])){
+            $data['idcategory'] = $_POST['idcategory'];
+
+            $result = Admin::supprimer_category($data);
+            if($result === 'ok'){
+                 Session::set('success', 'post Deleted');
+                 header("Location: " . BASE_URL."AjouterCategory");
+            }else{
+               echo $result ;
+            }
+        }
+        
+       }
+
+
+       public function  Afficher_commande(){
+        $afficher_member = Admin:: Affichercommande();
+        return $afficher_member;
+    }
+      
 }

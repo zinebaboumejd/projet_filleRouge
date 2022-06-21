@@ -39,4 +39,36 @@ class Admin
         $stmt->execute();
         return $stmt->fetchAll();
 }
+static public function afficher_member(){
+    $rool=0;
+    $stmt = DB::connect()->prepare('SELECT * FROM member WHERE rool=:rool');
+    $stmt->bindParam(':rool',$rool);
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
+
+static public function supprimer_category($data)
+{
+//     echo '<pre>';
+//   var_dump($data);
+//   die;
+    $id = $data['idcategory'];    
+    try {
+        $query = 'DELETE FROM category WHERE idcategory=:idcategory';
+        $stmt = DB::connect()->prepare($query);
+        $stmt->execute(array(":idcategory" => $id));
+        if ($stmt->execute()) {
+            return 'ok';
+        }
+    } catch (PDOException $ex) {
+        echo 'error' . $ex->getMessage();
+    }
+}
+static public function Affichercommande()
+{
+    $stmt = DB::connect()->prepare('SELECT * FROM `commende` INNER JOIN post WHERE commende.intpost=post.intpost   ');
+    $stmt->execute();
+    return $stmt->fetchAll();
+
+}
 }
