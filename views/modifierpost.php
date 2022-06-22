@@ -19,6 +19,7 @@ if(isset($_POST['intpost'])){
 	}
    
 ?>
+<div  class="min-h-[80vh]">
 <div class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gray-50 p-8 sm:p-12">
     <div class="w-full max-w-4xl rounded-md border-2 border-gray-100 bg-white p-14">
         <div class="flex flex-col items-center">
@@ -89,32 +90,3 @@ fileInput.onchange = () => {
 }
 </script>
 
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-md-8 mx-auto"></div>
-             <div class="card">
-             <?php //echo $AfficherPost->idmember;?>
-                 <?php  //die(var_dump($Afficher_un_Post));  ?>
-                <?php // include('./views/includes/alerts.php'); ?>
-                 <div class="card-header"><h1>modifier post :</h1></div>
-                    <div class="card-body bg-light">
-            
-                        <form method="post" >
-                    
-                          <div class="form-group">
-                            <label for="titrei_mg">titrei_mg:</label>
-                            <input type="text" name="titrei_mg" class="form-control" placeholder="titrei_mg"
-                            value="<?php echo $Afficher_un_Post->titrei_mg ; ?>">
-                            <input type="hidden" name="idmember" value="<?php //echo $Afficher_un_Post->idmember;?>">
-                          </div>
-                   
-                          <div class="form-group">
-                           <button type="submit" class="btn btn-primary mt-3" name="submit">Modifer</button>
-                          </div>
-                      </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->

@@ -1,8 +1,11 @@
 <?php   
+include("./views/includes/navbar.php");
+
 $Afficher_commande=new AdmineController();
 $Affichercommandes=$Afficher_commande->Afficher_commande();
 
 ?>
+<div  class="min-h-[80vh]">
 <div class="pt-20 flex justify-center">
 <table class="w-[500px] md:flex-row  text-center  grid-flow-col items-center my-20">
             <thead class="border-b   ">
@@ -47,4 +50,5 @@ $Affichercommandes=$Afficher_commande->Afficher_commande();
                 <?php  endforeach  ?>
             </tbody>
         </table>
+    </div>
     </div>

@@ -16,9 +16,7 @@
     <title>Sewarbeladk</title>
 </head>
 
-<body  >
-    <?php
-        // include("./views/includes/navbar.php");
-    ?>
+<body  oncontextmenu="return false">
+   
 
-<!-- oncontextmenu="return false" -->
+<!--  -->

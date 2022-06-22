@@ -3,7 +3,8 @@
 	if(isset($_POST['intpost'])){      
 		$suplike = new PostController();
 		$suplike->supprimerpanier();
-        Redirect::to("panier");
+    
+		header("Location: ".BASE_URL."panier");
 	}
 
 ?>

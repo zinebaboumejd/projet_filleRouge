@@ -13,7 +13,7 @@
         --bs-gutter-x: 0;
     } */
 </style>
-
+<div  class="min-h-[80vh]">
 <div class="h-screen flex">
     <div class="flex w-1/2 bg-gradient-to-r from-black-500 to-blue-500  i justify-around items-center">
         <div>
@@ -75,4 +75,5 @@
             </span>
         </form>
     </div>
+</div>
 </div>

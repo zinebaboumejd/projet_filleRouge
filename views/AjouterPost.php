@@ -13,6 +13,7 @@ require_once("./views/includes/navbar.php");
  
 
 ?>
+<div  class="min-h-[80vh]">
 
  <div class=" flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gray-50 p-8 sm:p-12 pt-30">
    <div class="w-full max-w-4xl rounded-md border-2 border-gray-100 bg-white p-14">
@@ -67,4 +68,5 @@ require_once("./views/includes/navbar.php");
         </div>
     </div>
 
+</div>
 </div>

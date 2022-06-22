@@ -248,6 +248,20 @@ class Post
         }
        
     }
+    static public function getProductsByCat($data){
+        // var_dump($data);
+        // die;
+        $id = $data['id'];
+        
+        try{
+         $stmt = DB::connect()->prepare('SELECT * FROM `post` WHERE category=:category');;
+          $stmt->execute(array(':category' => $id));
+          return $stmt->fetchAll();
+          $stmt = null;
+        }catch(PDOException $ex){
+          echo "erreur ".$ex->getMessage();
+        }
+      }
     
     
 }

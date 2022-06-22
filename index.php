@@ -8,7 +8,7 @@ $home = new HomeController();
 
 
 $pages=['home','register','login','logout','cart','AjouterPost','HomeMember','HomeAdmin','AfficherPost','supprimerpost','modifierpost',
-'Memebers','detailpost','AfficherMember','Profile','AjouterCategory','like','supprimerLike','Dpost','panier','supprimerpanier','Commondes'];
+'Memebers','detailpost','AfficherMember','Profile','AjouterCategory','like','supprimerLike','Dpost','panier','supprimerpanier','Commondes','category'];
 
 if(isset($_SESSION['log']) && $_SESSION['log'] == true){
 

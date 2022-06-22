@@ -1,5 +1,5 @@
 <?php 
-// require_once("./views/includes/navbar.php");
+require_once("./views/includes/navbar.php");
 
 
 ?>
@@ -34,7 +34,7 @@ $total=$totallike->totallike();
 ?>
 
 
-
+<div  class="min-h-[80vh]">
 <div class="">
 
     <div class='flex max-w-xl  bg-white shadow-md rounded-lg overflow-hidden mx-auto pt-20'>
@@ -42,7 +42,7 @@ $total=$totallike->totallike();
             <div class='w-full'>
                 <a href="<?php echo BASE_URL; ?>HomeMember"
                     class="block lg:inline-block text-md font-bold  text-orange-500  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
-                    HOME
+                    Accueil
                 </a>
                 <div class="flex flex-row mt-2 px-2 py-3 mx-3">
                     <div class="w-auto h-auto rounded-full border-2 border-pink-500">
@@ -225,6 +225,7 @@ $total=$totallike->totallike();
         </div>
     </div>
 </div>
+                            </div>
 <script>
 window.addEventListener("contextmenu",
     function(e) {

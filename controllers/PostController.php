@@ -199,6 +199,15 @@ class PostController
                     }
                 }
             } 
+            public function getProductsByCategory($cat_id){
+                if(isset($cat_id)){
+                  $data = array(
+                    'id' => $cat_id
+                  );
+                  $products = Post::getProductsByCat($data);
+                  return $products;
+                }
+              }
           
             
           

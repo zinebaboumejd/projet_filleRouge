@@ -8,7 +8,7 @@
 <style>
 
 </style>
-
+<div  class="min-h-[80vh]">
 <div class="h-screen flex " >
   <div class="flex w-1/2 bg-gradient-to-r from-black-500 to-blue-500  i justify-around items-center">
     
@@ -25,7 +25,7 @@
     <form class="bg-white" method="POST">
     <h1 class="text-gray-800 font-bold text-2xl mb-1">  <a href="<?php echo BASE_URL; ?>home"
                           class="  text-orange-500  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
-                          HOME
+                          Accueil
                       </a></h1>
       <h1 class="text-gray-800 font-bold text-2xl mb-1">login</h1>
       <p class="text-sm font-normal text-gray-600 mb-7">Content de te revoir</p>
@@ -46,29 +46,4 @@
     </form>
   </div>
 </div>
-<!-- <div class="container">
-    <div class="flex-container">
-
-        <div class="flex-item-left login-1 ">
-
-            <img class="smplimage" src="../../FilleRouge/public/logoimage/smplimage.png" alt="">
-
-        </div>
-        <div class="flex-item-right login-2" >
-      <h2>Login</h2>
-      <form method="post" class="">
-                        <div class="form-group">
-                            <input type="email" id='email' name="email" placeholder="Email" >
-                        </div>
-                        <div class="form-group">
-                            <input type="password" name="motedepass" placeholder="mote de pase" >
-                        </div>
-                        <button name="submit" >Conneter</button>
-                        <div class="">
-                    <a href="<?php echo BASE_URL;?>register" class=" btn-link">Register</a>
-                </div>
-                    </form>
-
 </div>
-    </div>
-</div> -->

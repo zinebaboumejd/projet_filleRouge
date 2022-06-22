@@ -1,7 +1,9 @@
 <?php 
 
  $Aff_Posts= new PostController();
- $AfficherPosts =$Aff_Posts->AfficherPost();
+
+
+ $categorys = $Aff_Posts->getProductsByCategory($_GET['category']);
 
 // die(var_dump($AfficherPosts));
 include("./views/includes/navbar.php");
@@ -19,23 +21,28 @@ include("./views/includes/navbar.php");
                 <div class="h-1 w-20 bg-indigo-500 rounded"></div>
             </div>
         </div>
+        <?php
+            if(count($categorys)==0){
+                echo "<h1>il n ya pas de poste dans cette categorie</h1>";
+            }
+        ?>
 
         <div class="flex flex-wrap -m-4">
-            <?php foreach ($AfficherPosts as $AfficherPost) : ?>
+            <?php foreach ($categorys as $category) : ?>
 
             <div class="lg:w-1/4 p-4 w-1/2">
                 <a class="block relative h-48 rounded overflow-hidden " href="">
                     <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                        src="./public/image/<?= $AfficherPost['image'] ?>">
+                        src="./public/image/<?= $category['image'] ?>">
                 </a>
 
                 <div class="mt-4">
                     <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                        <?php echo $AfficherPost['category'] ?></h3>
+                        <?php echo $category['category'] ?></h3>
                     <h2 class="text-gray-900 title-font text-lg font-medium">
-                        <?php echo $AfficherPost['titrei_mg'] ?>
+                        <?php echo $category['titrei_mg'] ?>
                     </h2>
-                    <p class="mt-1"><?php echo $AfficherPost['descreption'] ?></p>
+                    <p class="mt-1"><?php echo $category['descreption'] ?></p>
                 </div>
 
               
@@ -45,7 +52,7 @@ include("./views/includes/navbar.php");
                         class="flex-none flex items-center justify-center w-9 h-9 hover:bg-sky-800 rounded-md text-slate-300 border border-slate-200">
                        
                         <i class="fa-solid fa-eye">
-                            <input type="hidden" name="intpost"  value="<?php  echo $AfficherPost['intpost'] ?>">
+                            <input type="hidden" name="intpost"  value="<?php  echo $category['intpost'] ?>">
                         </i>
                        
                     </button>
@@ -61,6 +68,5 @@ include("./views/includes/navbar.php");
     </div>
 </section>
 </div>
-
 
 </div>

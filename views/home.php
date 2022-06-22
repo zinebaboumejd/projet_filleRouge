@@ -4,7 +4,7 @@ require_once("./views/includes/navbar.php");
 
 ?>
 
-
+<div  class="min-h-[80vh]">
 <div class="py-16 bg-white "   style=" background-image: url('../../../FilleRouge/public/logoimage/backdrop-5729092_1920.jpg');" id="particles-js">
     <div class="container m-auto px-6 space-y-8 text-gray-500 md:px-12 lg:px-20">
         <div class="justify-center text-center gap-6 md:text-left md:flex lg:items-center  lg:gap-16">
@@ -17,35 +17,12 @@ require_once("./views/includes/navbar.php");
                     Gagnez en visibilité et gagnez de l'argent pour votre entreprise avec les partenaires de <span class="text-blue-500">SewarBladk</span>.
                 </p>
 
-                <!-- Buy now and benefit up to 30% off</h1>
-                <p class="text-lg">Be part of millions people around the world using tailus in modern User Interfaces.</p> -->
-                <!-- <div class="flex flex-row-reverse flex-wrap justify-center gap-4 md:gap-6 md:justify-end">
-                    <button type="button" title="Start buying" class="w-full py-3 px-6 text-center rounded-xl transition bg-gray-700 shadow-xl hover:bg-gray-600 active:bg-gray-700 focus:bg-gray-600 sm:w-max">
-                        <span class="block text-white font-semibold">
-                            Start buying
-                        </span>
-                    </button>
-                    <button type="button" title="more about" class="w-full order-first py-3 px-6 text-center rounded-xl bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 focus:bg-gray-200 sm:w-max">
-                        <span class="block text-gray-600 font-semibold">
-                            More about
-                        </span>
-                    </button>
-                </div> -->
+               
             </div>
             
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
             <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_vcvl4urd.json" background="transparent" speed="1" style="width: 500px; height: 500px;" loop autoplay></lottie-player>
-            <!-- <div class="grid grid-cols-5 grid-rows-4 gap-4 md:w-5/12 lg:w-6/12">
-                <div class="col-span-2 row-span-4">
-                    <img src="../../FilleRouge/public/logoimage/morocco-g975fb755e_1920.jpg" class="rounded-full" width="740" height="160" alt="shoes" loading="lazy">
-                </div>
-                <div class="col-span-2 row-span-2">
-                    <img src="../../FilleRouge/public/logoimage/snow-g8ff701711_1920.png" class="w-full h-full object-cover object-top rounded-xl" width="640" height="640" alt="shoe" loading="lazy">
-                </div>
-                <div class="col-span-3 row-span-3">
-                    <img src="../../FilleRouge/public/logoimage/rabat-g8b879f892_1920.jpg" class="w-full h-full object-cover object-top rounded-xl" width="640" height="427" alt="shoes" loading="lazy">
-                </div>
-            </div> -->
+           
         </div>
     </div>
 </div>
@@ -126,9 +103,7 @@ require_once("./views/includes/navbar.php");
             <div class="p-4 md:w-1/3">
                 <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                     <div class="w-full">
-                        <!-- <div class="w-full flex p-2">
-            <h2 class="font-bold" >Construisez votre carrière</h2>
-              </div> -->
+                      
                     </div>
 
 
@@ -156,13 +131,11 @@ require_once("./views/includes/navbar.php");
             <div class="p-4 md:w-1/3">
                 <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                     <div class="w-full">
-                        <!-- <div class="w-full flex p-2">
-            <h2 class="font-bold" >Construisez votre carrière</h2>
-              </div> -->
+                    
                     </div>
 
 
-                    <img class="smplimage  h-80  w-98   " src="../../FilleRouge/public/logoimage/flower-g70602761b_1920.jpg" alt="">
+                    <img class="smplimage  h-80  w-98   " src="../../FilleRouge/public/logoimage/waterfall-g98707adfd_1920.jpg" alt="">
 
                     <div class="p-4">
                         <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
@@ -190,7 +163,7 @@ require_once("./views/includes/navbar.php");
 
 
 
-                        <img class="smplimage h-80  w-98 " src="../../FilleRouge/public/logoimage/casablanca-g519acc9a3_1920.jpg" alt="">
+                        <img class="smplimage h-80  w-98 " src="../../FilleRouge/public/logoimage/marrakech-4500910_1920.jpg" alt="">
 
                         <div class="p-4">
                             <h2 class="tracking-widest text-xs title-font font-bold text-green-400 mb-1 uppercase ">
