@@ -36,7 +36,7 @@ $Afficherlikes = $Aff_like->Afficherlike();
             <div class=" flex flex-col justify-center ml-6">
                 <h3 class="font-semibold text-black"><?= $Afficherlike['titrei_mg'] ?></h3>
                 <p>
-                    <?php echo $Afficherlike['descreption'] ?>
+                    <?php //echo $Afficherlike['descreption'] ?>
                 </p>
                 <p>$<?php echo $Afficherlike['prix'] ?> </p>
             </div>

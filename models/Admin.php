@@ -68,6 +68,8 @@ static public function Affichercommande()
 {
     $stmt = DB::connect()->prepare('SELECT * FROM `commende` INNER JOIN post WHERE commende.intpost=post.intpost   ');
     $stmt->execute();
+    // var_dump($stmt->fetchAll());
+    // die;
     return $stmt->fetchAll();
 
 }

@@ -1,5 +1,5 @@
 <?php 
-require_once("./views/includes/navbar.php");
+// require_once("./views/includes/navbar.php");
 
 
 ?>
@@ -40,7 +40,7 @@ $total=$totallike->totallike();
     <div class='flex max-w-xl  bg-white shadow-md rounded-lg overflow-hidden mx-auto pt-20'>
         <div class='flex items-center w-full'>
             <div class='w-full'>
-                <a href="<?php echo BASE_URL; ?>HomeMember"
+                <a href="<?php echo BASE_URL; ?>AfficherPost"
                     class="block lg:inline-block text-md font-bold  text-orange-500  sm:hover:border-indigo-400  hover:text-orange-500 mx-2 focus:text-blue-500  p-1 hover:bg-gray-300 sm:hover:bg-transparent rounded-lg">
                     Accueil
                 </a>

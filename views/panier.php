@@ -58,7 +58,7 @@ if (isset($_POST['valider'])) {
             </div>
             <div class="flex flex-col justify-between ml-4 flex-grow">
               <span class="font-bold text-2xl"><?= $Afficherpanier['titrei_mg'] ?></span>
-              <span class="text-gray-900 text-xl">  <?php echo $Afficherpanier['descreption'] ?></span>
+              <span class="text-gray-900 text-xl">  <?php //echo $Afficherpanier['descreption'] ?></span>
               <span class="text-gray-900 text-xs">  <?php echo $Afficherpanier['category'] ?></span>
 
             </div>

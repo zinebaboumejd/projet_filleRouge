@@ -3,6 +3,8 @@ include("./views/includes/navbar.php");
 
 $Afficher_commande=new AdmineController();
 $Affichercommandes=$Afficher_commande->Afficher_commande();
+// var_dump($Affichercommandes);
+// die();
 
 ?>
 <div  class="min-h-[80vh]">
@@ -18,7 +20,7 @@ $Affichercommandes=$Afficher_commande->Afficher_commande();
                         ID user
                     </th>
                     <th scope="col" class=" px-6 py-4 text-blue-500">
-                        Titre Post
+                        Titre Post 
                     </th>
                     <th scope="col" class="  px-6 py-4 text-blue-500 ">
                        Prix Post
