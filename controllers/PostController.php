@@ -3,12 +3,19 @@ class PostController
 {
      public function AjouterPost(){
             if(isset($_POST['submit'])){
-                // var_dump($_POST);
-                // var_dump($_FILES);
+             
+                //extension
                 $ext = pathinfo($_FILES["image"]["name"],PATHINFO_EXTENSION);
+
                 $new_name = time().'.'.$ext;
+
+                // spécifier la destination
                 $target = getcwd().'\public\image\\'.$new_name; //C:\wamp64\www\FilleRouge
+
+                // déplacer l'image téléchargée vers la destination
                 move_uploaded_file($_FILES["image"]["tmp_name"],$target);
+
+
                 $data = array(                 
                     'titrei_mg' => $_POST['titrei_mg'],
                     'descreption' => $_POST['descreption'],
@@ -18,19 +25,15 @@ class PostController
                     'prix' => $_POST['prix'],
                     
                 );
-                // var_dump($data);
-                  
-                // die(var_dump($data));
                 $result = Post::AjouterPost($data); 
                 if($result === 'ok'){
-                    // echo 'Yoo';
-                    // Session::set('success', ' Added post');
+                
                     header("Location: " . BASE_URL."AfficherPost");
              
             }else{
                echo $result ;
             }
-                // die(var_dump($result));      
+                   
             }
         }  
        

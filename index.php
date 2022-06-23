@@ -21,7 +21,7 @@ if(isset($_SESSION['log']) && $_SESSION['log'] == true){
             include('./views/includes/404.php');
         }
     }else if($_SESSION['rool']==0){
-        $home->index('HomeMember');
+        $home->index('home');
     }else if($_SESSION['rool']==1){
         $home->index('HomeAdmin');
     }
